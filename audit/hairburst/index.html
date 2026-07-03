@@ -34,7 +34,15 @@ p{font-size:16.5px}
 .sting .hot{color:var(--accent)}
 /* winning-ads table (breaks out wider than the reading column) */
 .bleed{width:min(1100px,94vw);position:relative;left:50%;transform:translateX(-50%)}
-.tscroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+/* horizontal-scroll affordance: right-edge fade + swipe hint + momentum */
+.hwrap{position:relative;--fade:var(--paper)}
+.hwrap::after{content:"";position:absolute;top:0;bottom:0;right:0;width:48px;pointer-events:none;z-index:3;
+  border-radius:0 12px 12px 0;background:linear-gradient(to right,rgba(0,0,0,0),var(--fade));opacity:0;transition:opacity .25s}
+.hwrap.can-scroll::after{opacity:1}
+.hwrap.at-end::after{opacity:0}
+.swipehint{display:none;margin-top:10px;text-align:center;font-size:12px;letter-spacing:.04em;color:var(--mut)}
+@media(max-width:640px){.hwrap.can-scroll .swipehint{display:block}}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px;background:var(--card)}
 table.wt{border-collapse:collapse;width:100%;min-width:940px;font-size:13px}
 table.wt th{text-align:left;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap}
 table.wt td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -48,7 +56,7 @@ table.wt tbody tr:hover{background:#f2ebdd}
 .tnum{white-space:nowrap;color:var(--mut);font-variant-numeric:tabular-nums}
 .tbtn{display:inline-block;font-size:11.5px;font-weight:700;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:4px 11px;white-space:nowrap}
 .tbtn:hover{border-color:var(--accent)}
-.mx-wrap{overflow-x:auto;margin-top:8px}
+.mx-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:8px}
 table.mx{border-collapse:separate;border-spacing:4px;width:100%;min-width:520px}
 table.mx th{font-weight:600;color:var(--mut);font-size:12px;padding:6px 4px;text-align:center}
 table.mx th.rowlab{text-align:left;width:30%;color:var(--ink);font-size:13px}
@@ -130,11 +138,11 @@ td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5p
   how long an ad has stayed live. The longer it runs, the more likely it is paying. Here are all
   <b>10</b>, longest-running first, broken down the four dials I mix to build ads:
   <b>Concept, Angle, Style, Hook</b> (CASH), plus the avatar and awareness stage each one hits.</p>
-  <div class="bleed"><div class="tscroll"><table class="wt">
+  <div class="bleed hwrap" style="--fade:var(--card)"><div class="tscroll"><table class="wt">
     <thead><tr><th></th><th>Concept</th><th>Angle</th><th>Style</th><th>Hook</th><th>Hook type</th>
     <th>Avatar</th><th>Awareness</th><th>Run</th><th></th></tr></thead>
     <tbody><tr><td class="tp"><img class="tthumb" src="img/ad_1479290819964019.jpg" alt="" loading="lazy"></td><td class="tc" title="Emotional postpartum/stress hair loss reversed by daily Advanced+ (TrichoBurst/Phytoshield)">Postpartum stress loss reversed with Advanced+</td><td>Customer Transformation</td><td class="tf">Video &middot; Problem to solution video</td><td class="th">&ldquo;In 2025, I lost most of my hair&rdquo;</td><td>Confession</td><td>Postpartum mums</td><td>Problem-aware</td><td class="tnum">35d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1479290819964019" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1650502416239148.jpg" alt="" loading="lazy"></td><td class="tc" title="Split-screen podcast: postpartum hair loss, scalp biopsy, then Advanced+ solution">Postpartum loss, a scalp biopsy, then the fix</td><td>Customer Transformation</td><td class="tf">Video &middot; Podcast-style clip</td><td class="th">&ldquo;I went for that scan and that test and it was one of the worst days of my life.&rdquo;</td><td>Confession</td><td>Postpartum mums</td><td>Problem-aware</td><td class="tnum">35d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1650502416239148" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_997618836062287.jpg" alt="" loading="lazy"></td><td class="tc" title="Creator&#x27;s 11-month journey turning thinning hair to its fullest">11-month journey from thinning to fullest hair</td><td>Customer Transformation</td><td class="tf">Video &middot; Creator talking to camera</td><td class="th">&ldquo;So, I was on FaceTime to the girls, this is my balcony where I live, and I was showing them my cute little holiday outfit&rdquo;</td><td>Relatability</td><td>General female thinning/shedding</td><td>Solution-aware</td><td class="tnum">35d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=997618836062287" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1351524143550418.jpg" alt="" loading="lazy"></td><td class="tc" title="Self-care Sunday routine vlog showcasing Advanced+ products and supplement">A self-care Sunday routine with the products</td><td>Outcome Led</td><td class="tf">Video &middot; Lifestyle montage</td><td class="th">&ldquo;There is nothing like a self-care Sunday...&rdquo;</td><td>Relatability</td><td>Broad / unsegmented</td><td>Product-aware</td><td class="tnum">35d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1351524143550418" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1860317304930940.jpg" alt="" loading="lazy"></td><td class="tc" title="6-month reversal of hairline thinning from tight hairstyles via Advanced+">Reversed hairline thinning from tight styles</td><td>Customer Transformation</td><td class="tf">Video &middot; Creator talking to camera</td><td class="th">&ldquo;Recently I&#x27;ve had so many people asking what I&#x27;m using on my hair.&rdquo;</td><td>Curiosity</td><td>General female thinning/shedding</td><td>Solution-aware</td><td class="tnum">35d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1860317304930940" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1755629742320820.jpg" alt="" loading="lazy"></td><td class="tc" title="£100 free-gifts offer on 3-month plan with product trio hero shot">£100 in free gifts on the 3-month plan</td><td>Price Value</td><td class="tf">Static &middot; Offer / discount</td><td class="th">&ldquo;£100 WORTH OF FREE GIFTS&rdquo;</td><td>Desire Led</td><td>Broad / unsegmented</td><td>Most-aware</td><td class="tnum">35d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1755629742320820" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1293829546243348.jpg" alt="" loading="lazy"></td><td class="tc" title="Split-screen 6- and 12-month postpartum regrowth progress with Hairburst">Postpartum before/after: 6 and 12-month regrowth</td><td>Customer Transformation</td><td class="tf">Video &middot; Before / after video</td><td class="th">&ldquo;that is six months after my postpartum hair loss journey&rdquo;</td><td>Before After</td><td>Postpartum mums</td><td>Problem-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1293829546243348" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_4299505616931125.jpg" alt="" loading="lazy"></td><td class="tc" title="One-year transformation from clumps falling out to thick healthy hair">One year from clumps to thick, healthy hair</td><td>Customer Transformation</td><td class="tf">Video &middot; Creator talking to camera</td><td class="th">&ldquo;My hairdresser cannot believe how much hair I have after taking this for a whole year.&rdquo;</td><td>Bold Claim</td><td>General female thinning/shedding</td><td>Product-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=4299505616931125" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_997061506633581.jpg" alt="" loading="lazy"></td><td class="tc" title="One-year transformation from clumps falling out to thick healthy hair">One year from clumps to thick, healthy hair</td><td>Customer Transformation</td><td class="tf">Video &middot; Creator talking to camera</td><td class="th">&ldquo;My hairdresser cannot believe how much hair I have after taking this for a whole year.&rdquo;</td><td>Bold Claim</td><td>General female thinning/shedding</td><td>Product-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=997061506633581" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_965694355874463.jpg" alt="" loading="lazy"></td><td class="tc" title="&#x27;You buy cheap, you buy twice&#x27; anchoring Advanced+ vs cheap supplements, 88% stat">Buy cheap, buy twice: Advanced+ vs the rest (88%)</td><td>Comparison Led</td><td class="tf">Static &middot; Us-vs-them image</td><td class="th">&ldquo;STOP BUYING CHEAP HAIR SUPPLEMENTS&rdquo;</td><td>Cost Comparison</td><td>Broad / unsegmented</td><td>Solution-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=965694355874463" target="_blank" rel="noopener">Ad &#8599;</a></td></tr></tbody>
-  </table></div></div>
+  </table></div><div class="swipehint">Swipe to see every column &#8594;</div></div>
 </section>
 
 <section>
@@ -142,7 +150,7 @@ td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5p
   <h2>The Creative Diversity Matrix</h2>
   <p class="mut">Avatars down the side, awareness stages across the top. Every ad you run lands in one box. The
   goal is simple: fill the gaps.</p>
-  <div class="mx-wrap"><table class="mx"><tr><th class="rowlab"></th><th class="gapcol">Unaware</th><th class="">Problem-aware</th><th class="">Solution-aware</th><th class="">Product-aware</th><th class="">Most-aware</th></tr><tr><th class="rowlab">Postpartum mums</th><td class="c-empty gapcol"></td><td class="c-proven">11</td><td class="c-testing">3</td><td class="c-empty"></td><td class="c-empty"></td></tr><tr><th class="rowlab">GLP-1 / weight-loss shedders</th><td class="c-empty gapcol"></td><td class="c-testing">9</td><td class="c-testing">2</td><td class="c-testing">1</td><td class="c-empty"></td></tr><tr><th class="rowlab">Menopause / peri (45+)</th><td class="c-empty gapcol"></td><td class="c-testing">2</td><td class="c-empty"></td><td class="c-empty"></td><td class="c-empty"></td></tr><tr><th class="rowlab">General female thinning/shedding</th><td class="c-empty gapcol"></td><td class="c-testing">13</td><td class="c-proven">6</td><td class="c-proven">4</td><td class="c-empty"></td></tr><tr><th class="rowlab">Broad / unsegmented</th><td class="c-empty gapcol"></td><td class="c-testing">3</td><td class="c-proven">5</td><td class="c-proven">5</td><td class="c-proven">2</td></tr></table></div>
+  <div class="hwrap"><div class="mx-wrap"><table class="mx"><tr><th class="rowlab"></th><th class="gapcol">Unaware</th><th class="">Problem-aware</th><th class="">Solution-aware</th><th class="">Product-aware</th><th class="">Most-aware</th></tr><tr><th class="rowlab">Postpartum mums</th><td class="c-empty gapcol"></td><td class="c-proven">11</td><td class="c-testing">3</td><td class="c-empty"></td><td class="c-empty"></td></tr><tr><th class="rowlab">GLP-1 / weight-loss shedders</th><td class="c-empty gapcol"></td><td class="c-testing">9</td><td class="c-testing">2</td><td class="c-testing">1</td><td class="c-empty"></td></tr><tr><th class="rowlab">Menopause / peri (45+)</th><td class="c-empty gapcol"></td><td class="c-testing">2</td><td class="c-empty"></td><td class="c-empty"></td><td class="c-empty"></td></tr><tr><th class="rowlab">General female thinning/shedding</th><td class="c-empty gapcol"></td><td class="c-testing">13</td><td class="c-proven">6</td><td class="c-proven">4</td><td class="c-empty"></td></tr><tr><th class="rowlab">Broad / unsegmented</th><td class="c-empty gapcol"></td><td class="c-testing">3</td><td class="c-proven">5</td><td class="c-proven">5</td><td class="c-proven">2</td></tr></table></div><div class="swipehint">Swipe across the stages &#8594;</div></div>
   <div class="legend">
     <span><span class="sw" style="background:var(--ink)"></span>Proven ad here</span>
     <span><span class="sw" style="background:#e7c9bf"></span>Testing</span>
@@ -214,4 +222,19 @@ td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5p
   <p style="margin-top:10px">Prepared by <b>Ben Lomon</b> &middot; July 2026</p>
 </div>
 
-</div></body></html>
+</div>
+<script>
+(function(){
+  document.querySelectorAll(".hwrap").forEach(function(w){
+    var sc=w.querySelector(".tscroll,.mx-wrap"); if(!sc) return;
+    function upd(){
+      w.classList.toggle("can-scroll", sc.scrollWidth > sc.clientWidth + 4);
+      w.classList.toggle("at-end", sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4);
+    }
+    sc.addEventListener("scroll", upd, {passive:true});
+    window.addEventListener("resize", upd);
+    upd();
+  });
+})();
+</script>
+</body></html>
