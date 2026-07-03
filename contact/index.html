@@ -114,8 +114,8 @@
         .then(function(d){
           if(d.success){
             f.innerHTML='<div class="form-sent"><div class="tick">&#10003;</div>'+
-              '<h3>Message sent.</h3><p>I&rsquo;ll come back to you within a day or two with a '+
-              'specific first move, not a generic pitch.</p></div>';
+              '<h3>Thank you for your message!</h3>'+
+              '<p>I&rsquo;ll come back to you within a day or two.</p></div>';
           } else { throw new Error(); }
         })
         .catch(function(){
