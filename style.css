@@ -97,7 +97,7 @@ section.blk{padding:104px 0}
 
 /* CTA band (centered) + masterline */
 .cta-band{text-align:center;padding:104px 0 118px}
-.masterline{max-width:54ch;margin:0 auto 56px;padding-bottom:52px;border-bottom:1px solid var(--line);color:var(--muted);font-size:17px;line-height:1.6}
+.masterline{max-width:52ch;margin:48px auto 0;padding-top:36px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px;line-height:1.6}
 .cta-photo{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:center 22%;display:block;margin:0 auto 20px;box-shadow:0 16px 34px -18px rgba(35,22,10,.5)}
 .cta-band h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,6vw,78px);letter-spacing:-.02em;line-height:1;max-width:16ch;margin:0 auto}
 .cta-band .sub{margin:26px auto 42px;color:var(--muted);max-width:42ch;font-size:19px}
@@ -153,6 +153,8 @@ footer{border-top:1px solid var(--line);padding:38px 0}
   .pstep{grid-template-columns:48px 1fr;gap:18px}
   .form{padding:26px}
   .form .row2{grid-template-columns:1fr}
+  .contact-grid{padding-bottom:76px}
+  footer{padding-top:54px}
   .foot-in{justify-content:center;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){

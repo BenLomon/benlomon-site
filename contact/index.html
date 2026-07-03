@@ -3,31 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Ben Lomon</title>
+<title>Contact - Ben Lomon</title>
 <meta name="description" content="Get in touch with Ben Lomon. Creative strategy and direct-response copy for DTC brands scaling on Meta.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contact — Ben Lomon">
+<meta property="og:title" content="Contact - Ben Lomon">
 <meta property="og:description" content="Creative strategy and direct-response copy for DTC brands scaling on Meta.">
-<meta property="og:url" content="https://benlomon.com/contact.html">
+<meta property="og:url" content="https://benlomon.com/contact/">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <script>document.documentElement.className="js";</script>
 
 <nav>
   <div class="wrap nav-in">
-    <a href="index.html" class="mark">Ben Lomon<span class="dot">.</span></a>
+    <a href="/" class="mark">Ben Lomon<span class="dot">.</span></a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="index.html#results">Results</a>
-        <a href="index.html#approach">Approach</a>
+        <a href="/#results">Results</a>
+        <a href="/#approach">Approach</a>
       </div>
-      <a href="index.html" class="btn ghost">&#8592; Home</a>
+      <a href="/" class="btn ghost">&#8592; Home</a>
     </div>
   </div>
 </nav>
@@ -42,7 +42,7 @@
 <section>
   <div class="wrap contact-grid">
     <div class="contact-info">
-      <img class="photo rv" src="ben.jpg" alt="Ben Lomon" onerror="this.style.display='none'">
+      <img class="photo rv" src="/ben.jpg" alt="Ben Lomon" onerror="this.style.display='none'">
       <div class="status rv" style="margin-bottom:22px"><span class="pulse"></span> Currently taking on new brands</div>
       <p class="rv">Tell me about your brand and situation. If it&rsquo;s a fit, I&rsquo;ll come back with a specific first move, not a generic pitch.</p>
       <div class="socials rv">
@@ -51,9 +51,11 @@
       </div>
     </div>
 
-    <form class="form rv" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+    <form class="form rv" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="PASTE_WEB3FORMS_KEY">
+      <input type="hidden" name="subject" value="New brand inquiry from benlomon.com">
+      <input type="hidden" name="redirect" value="https://benlomon.com/?sent=1">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
       <div class="row2">
         <div class="field">
           <label for="firstname">First name</label>
@@ -71,12 +73,12 @@
         </div>
         <div class="field">
           <label for="brand">Brand / website</label>
-          <input id="brand" name="brand" type="text" placeholder="yourbrand.com">
+          <input id="brand" name="brand" type="text">
         </div>
       </div>
       <div class="field">
         <label for="message">What are you trying to scale?</label>
-        <textarea id="message" name="message" required placeholder="A line or two on the brand, the offer, and where cold traffic is stuck."></textarea>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <button type="submit" class="btn big">Send it over <span class="arw">&#8599;</span></button>
       <p class="fineprint">I&rsquo;ll reply as soon as I can, usually within 1-2 days.</p>
@@ -86,7 +88,7 @@
 
 <footer>
   <div class="wrap foot-in">
-    <a href="index.html" class="mark">Ben Lomon<span class="dot">.</span></a>
+    <a href="/" class="mark">Ben Lomon<span class="dot">.</span></a>
     <div>Creative strategist &amp; direct-response copywriter &middot; Sweden</div>
     <div>&copy; 2026 Ben Lomon</div>
   </div>
