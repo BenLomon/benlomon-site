@@ -101,6 +101,31 @@
   },{threshold:.12});
   document.querySelectorAll(".contact-grid .rv").forEach(function(el){io.observe(el)});
   document.querySelectorAll(".mail-link").forEach(function(a){a.href="mailto:"+a.dataset.u+"@"+a.dataset.d;});
+
+  // submit the form in-place (AJAX) and swap to an inline confirmation, no page jump
+  var f=document.querySelector("form.form");
+  if(f){
+    f.addEventListener("submit",function(e){
+      e.preventDefault();
+      var btn=f.querySelector("button[type=submit]");
+      if(btn){btn.disabled=true;btn.innerHTML="Sending&hellip;";}
+      fetch("https://api.web3forms.com/submit",{method:"POST",body:new FormData(f)})
+        .then(function(r){return r.json();})
+        .then(function(d){
+          if(d.success){
+            f.innerHTML='<div class="form-sent"><div class="tick">&#10003;</div>'+
+              '<h3>Message sent.</h3><p>I&rsquo;ll come back to you within a day or two with a '+
+              'specific first move, not a generic pitch.</p></div>';
+          } else { throw new Error(); }
+        })
+        .catch(function(){
+          if(btn){btn.disabled=false;btn.innerHTML='Send it over <span class="arw">&#8599;</span>';}
+          var n=f.querySelector(".form-err")||document.createElement("p");
+          n.className="form-err";n.textContent="Something glitched. Email ben@benlomon.com directly and I’ll get it.";
+          if(!n.parentNode) f.appendChild(n);
+        });
+    });
+  }
 })();
 </script>
 </body>
