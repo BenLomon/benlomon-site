@@ -3,7 +3,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>TYPEBEA: The Gap Playbook</title>
+<meta name="color-scheme" content="light">
+<meta http-equiv="Cache-Control" content="no-store, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<title>TypeBea: The Gap Playbook</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +27,21 @@ h1.brand{font-family:var(--serif);font-weight:600;font-size:clamp(40px,8vw,66px)
 .stat .n{font-family:var(--serif);font-weight:600;font-size:40px;letter-spacing:-.02em;line-height:1}
 .stat .n small{font-size:19px;color:var(--mut)}
 .stat .l{font-size:12.5px;color:var(--mut);margin-top:6px}
-.scorenote{margin:22px 0 0;font-size:14px;color:var(--mut);max-width:62ch;font-style:italic}
+.scorenote{margin:24px 0 0;font-size:14px;color:var(--mut);background:var(--card);padding:20px 24px;border-radius:12px;border:1px solid var(--line);border-left:3px solid var(--accent);box-shadow:0 2px 10px rgba(25,21,16,.05);line-height:1.62}
+.scorenote .sn-h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.scorenote p{margin:0;text-align:justify}
+.scorenote .sn-h{text-align:left}
+.scorenote b{color:var(--ink)}
 .rule{height:1px;background:var(--line);margin:56px 0}
 section{margin:56px 0}
 h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.14;letter-spacing:-.01em;margin:0 0 16px}
-p{font-size:16.5px}
+p{font-size:16.5px;text-wrap:pretty}
+.intro,.scorenote p,.gp-offer .lead,.gp-offer .offer{text-wrap:pretty}
 .mut{color:var(--mut);margin-top:-4px}
 .sting{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4.6vw,36px);line-height:1.22;letter-spacing:-.01em;margin:0}
 .sting .hot{color:var(--accent)}
 /* winning-ads table (breaks out wider than the reading column) */
-.bleed{width:min(1100px,94vw);position:relative;left:50%;transform:translateX(-50%)}
+.bleed{width:min(1280px,96vw);position:relative;left:50%;transform:translateX(-50%)}
 /* horizontal-scroll affordance: right-edge fade + swipe hint + momentum */
 .hwrap{position:relative;--fade:var(--paper)}
 .hwrap::after{content:"";position:absolute;top:0;bottom:0;right:0;width:48px;pointer-events:none;z-index:3;
@@ -63,17 +71,45 @@ table.mx th.rowlab{text-align:left;width:30%;color:var(--ink);font-size:13px}
 table.mx th.corner{text-align:left;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;vertical-align:bottom}
 table.mx th.gapcol{color:var(--accent)}
 table.mx td{text-align:center;height:46px;font-weight:700;font-size:14px;border-radius:4px}
+td.mxcell{cursor:pointer;transition:filter .12s,box-shadow .12s}
+td.mxcell:hover{filter:brightness(.93);box-shadow:inset 0 0 0 2px var(--accent)}
+.mxmodal{position:fixed;inset:0;background:rgba(25,21,16,.55);display:none;align-items:center;justify-content:center;z-index:200;padding:24px}
+.mxmodal.on{display:flex}
+body.mx-lock{overflow:hidden}
+.mxm-card{background:var(--paper);border-radius:16px;max-width:660px;width:100%;max-height:84vh;display:flex;flex-direction:column;box-shadow:0 24px 70px rgba(0,0,0,.35);overflow:hidden}
+.mxm-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid var(--line)}
+.mxm-head span{font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:-.01em}
+.mxm-close{border:none;background:none;font-size:28px;line-height:1;color:var(--mut);cursor:pointer;padding:0 2px}
+.mxm-close:hover{color:var(--ink)}
+.mxm-body{overflow-y:auto;padding:6px 24px 22px}
+.mxm-row{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.mxm-row:last-child{border-bottom:none}
+.mxm-row img{width:58px;height:58px;object-fit:cover;border-radius:9px;flex:none;background:var(--line)}
+.mxm-tx{flex:1;min-width:0}
+.mxm-c{font-weight:600;font-size:14.5px;margin:0 0 4px;color:var(--ink)}
+.mxm-h{font-size:13px;color:var(--mut);font-style:italic;margin:0 0 4px;line-height:1.4}
+.mxm-m{font-size:11.5px;color:var(--mut);margin:0;font-variant-numeric:tabular-nums}
+.mxm-day{display:inline-block;font-weight:700;font-size:11px;padding:2px 9px;border-radius:20px;margin-right:5px}
+.mxm-day.proven{background:var(--ink);color:var(--paper)}
+.mxm-day.testing{background:#e7c9bf;color:var(--accent)}
+.mxm-go{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap;font-size:13px;flex:none}
+.mxm-empty{color:var(--mut);font-size:15px;line-height:1.5;padding:22px 0;margin:0}
 .c-proven{background:var(--ink);color:var(--paper)}
 .c-testing{background:#e7c9bf;color:var(--accent)}
 .c-empty{background:#ece5d7;color:transparent}
 td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5px,#f7ece9 5px,#f7ece9 10px);border:1px solid #e7b8ac}
+table.mx tr.broadrow td,table.mx tr.broadrow th{border-top:2px solid var(--line);padding-top:8px}
+table.mx tr.broadrow th.rowlab{color:var(--mut);font-style:italic;font-weight:500}
 .legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px;font-size:12.5px;color:var(--mut)}
 .sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
 /* distribution bars */
 .distgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.diststack{display:flex;flex-direction:column;gap:16px;margin-top:8px}
 .distcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
 .distcard.full{grid-column:1/-1}
-.dist-h{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink);margin-bottom:14px}
+.dist-h{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink);margin-bottom:8px}
+.dist-v{font-size:13.5px;line-height:1.5;color:var(--mut);margin:0 0 14px;max-width:64ch}
+.dist-v b{color:var(--ink);font-weight:600}
 .bar-row{display:flex;align-items:center;gap:12px;margin:9px 0}
 .bar-lab{flex:0 0 42%;font-size:13px}
 .bar-lab.hot{color:var(--accent);font-weight:600}
@@ -81,6 +117,69 @@ td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5p
 .bar-fill{height:100%;background:var(--accent);border-radius:6px}
 .bar-fill.zero{background:#e7b8ac}
 .bar-pct{flex:0 0 42px;text-align:right;font-size:12.5px;color:var(--mut);font-variant-numeric:tabular-nums}
+/* interactive "every ad" grid */
+.toolbar{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center;margin:6px 0 18px}
+.toolbar label{color:var(--mut);display:flex;gap:6px;align-items:center;font-size:13px}
+.toolbar select{font:inherit;font-size:13px;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.rr-key{margin-left:auto;color:var(--mut);display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;font-size:11.5px}
+.rr-key .rr{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:-1px}
+.rr.proven{background:var(--ink)}
+.rr.testing{background:#e7c9bf}
+/* diversity-score tier ladder: D..S, gradient fills, current tier ringed */
+.tiers{display:flex;gap:8px;margin:20px 0 16px;width:100%}
+.tier{flex:1;text-align:center;padding:16px 4px 13px;border-radius:10px;position:relative}
+.tier .tlet{display:block;font-family:var(--sans);font-weight:700;font-size:26px;line-height:1;letter-spacing:.01em}
+.tier .trng{display:block;font-size:11.5px;font-weight:600;margin-top:6px}
+.tier .tpct{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap}
+.tier.t0{background:#e6ddcc;color:var(--ink)}
+.tier.t1{background:#e6c3b6;color:var(--ink)}
+.tier.t2{background:#dba38a;color:var(--ink)}
+.tier.t3{background:#a8492b;color:#fff}
+.tier.t4{background:var(--ink);color:var(--paper)}
+.tier.on{outline:2.5px solid var(--ink);outline-offset:3px}
+.tier.t4.on{outline-color:var(--paper)}
+.adt{width:100%;border-collapse:collapse;font-size:13.5px}
+.adt th{text-align:left;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:0 12px 9px;border-bottom:1px solid var(--line)}
+.adt td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.4}
+.adt th.sortable{cursor:pointer;user-select:none;white-space:nowrap}
+.adt th.sortable:hover{color:var(--ink)}
+.adt .c-thumb{width:52px;padding-right:0}
+.adt .c-thumb img{width:44px;height:44px;object-fit:cover;border-radius:8px;display:block;background:var(--line)}
+.adt .c-concept{font-weight:500}
+.adt .c-hook b{display:block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.adt .c-hook span{color:var(--mut);font-style:italic}
+.adt .c-angle b{display:block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.adt .c-angle span{color:var(--mut)}
+.adt .c-angle{min-width:190px;max-width:250px}
+.adt .days{display:inline-block;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;padding:3px 10px;border-radius:20px;font-size:12px}
+.adt .days.proven{background:var(--ink);color:var(--paper)}
+.adt .days.testing{background:#e7c9bf;color:var(--accent)}
+.adt .vcount{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;color:var(--mut);font-variant-numeric:tabular-nums;cursor:help}
+.adt a.go{color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}
+.adt-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.avgrid{margin-top:18px}
+.avrow{display:grid;grid-template-columns:repeat(var(--c),1fr);gap:14px}
+.avrow+.avrow{margin-top:14px}
+@media(max-width:820px){.avrow{grid-template-columns:1fr}}
+.avcard{position:relative;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:20px 20px 16px;box-shadow:0 2px 10px rgba(25,21,16,.05);transition:transform .16s ease,box-shadow .16s ease;overflow:hidden}
+.avcard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(25,21,16,.09)}
+.av-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.avcard .ghost{font-family:var(--serif);font-style:italic;font-weight:600;font-size:34px;line-height:.8;color:var(--ink);opacity:.09;pointer-events:none;flex:none}
+.av-k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700;margin:0}
+.avcard h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.22;letter-spacing:-.01em;margin:6px 0 10px}
+.av-desire{font-family:var(--serif);font-size:15.5px;line-height:1.35;color:var(--ink);font-style:italic;margin:3px 0 12px}
+.av-doorlab{margin:0 0 6px}
+.avchips{display:flex;flex-wrap:wrap;gap:6px}
+.avchips .chip{font-size:11px;padding:3px 10px;border:1px solid var(--line);border-radius:20px;color:var(--mut);background:var(--paper)}
+.avchips .chip.facet{border-color:var(--ink);color:var(--ink)}
+.avstrip{display:flex;gap:3px;margin:16px 0 7px}
+.avstrip i{flex:1;height:12px;border-radius:3px;background:#ece5d7}
+.avstrip i.testing{background:#e7c9bf}
+.avstrip i.proven{background:var(--ink)}
+.av-foot{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--mut)}
+.adt .col-av{color:var(--ink);font-weight:500;min-width:130px}
+.adt.no-av .col-av,.adt.no-st .col-st{display:none}
+.adt-count{font-size:12px;margin-top:14px}
 /* mechanism + funnel */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .mcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
@@ -99,6 +198,16 @@ td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5p
 .attack{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:28px 30px;margin-top:8px}
 .attack .tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
 .attack h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:8px 0 12px}
+.plays{list-style:none;margin:22px 0 0;padding:0;counter-reset:none}
+.play{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.play:first-child{border-top:none}
+.play .pnum{font-family:var(--serif);font-style:italic;font-weight:600;font-size:30px;line-height:1;color:var(--accent);opacity:.5;min-width:38px}
+.play .ptxt{flex:1}
+.play .pmove{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:-.01em;margin:0 0 6px}
+.play .pdesc{color:var(--mut);font-size:15px;line-height:1.55;margin:0 0 8px;max-width:60ch}
+.play .pscore{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:4px 12px;margin:0;font-variant-numeric:tabular-nums}
+.loomtop{margin:26px 0 4px}
+.loomtop-k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
 .loom{position:relative;padding-bottom:56.25%;height:0;margin:6px 0 22px;border-radius:10px;overflow:hidden;background:#000}
 .loom iframe{position:absolute;top:0;left:0;width:100%;height:100%}
 .holdback{font-size:18px;margin-top:26px}
@@ -109,132 +218,297 @@ td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5p
 .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:15px 30px;border-radius:40px}
 .foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
 .foot b{color:var(--ink)}
+/* the sales close: sameness problem -> the 5-step loop (you-are-here) -> book */
+.gp-offer{background:var(--ink);color:var(--paper);border-radius:16px;padding:48px 44px;margin-top:60px}
+.cal-embed{background:#fff;border-radius:12px;overflow:hidden;margin-top:8px;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.gp-offer .ck{color:var(--accent);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin:0 0 16px}
+.gp-offer h2{color:var(--paper);font-size:30px;line-height:1.16;margin:0 0 20px;max-width:24ch}
+.gp-offer .lead{color:#d8cfbe;font-size:17px;line-height:1.62;max-width:62ch;margin:0 0 16px}
+.gp-offer .lead b{color:var(--paper)}
+.gp-offer .judg{color:var(--paper);font-weight:700;font-size:22px;line-height:1.25;margin:38px 0 8px}
+.gp-offer .sub{color:#d8cfbe;font-size:15px;line-height:1.55;margin:0 0 28px;max-width:58ch}
+.loop{list-style:none;margin:0 0 32px;padding:0}
+.loop .step{position:relative;display:flex;flex-wrap:wrap;gap:16px;padding:0 0 24px}
+.loop .step:last-child{padding-bottom:0}
+.loop .step:not(:last-child)::before{content:"";position:absolute;left:17px;top:38px;bottom:2px;width:2px;background:#3b342a}
+.loop .dot{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid #4a4238;background:var(--ink);color:#9a9082;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;z-index:1}
+.loop .step.here .dot{background:var(--accent);border-color:var(--accent);color:#fff}
+.loop .txt{flex:1;min-width:220px;padding-top:1px}
+.loop .txt b{display:block;color:var(--paper);font-size:16px;margin-bottom:3px}
+.loop .txt span{color:#c6bcaa;font-size:14px;line-height:1.5}
+.loop .youhere{flex:none;align-self:flex-start;margin-left:auto;margin-top:6px;background:var(--accent);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.gp-offer .offer{color:#d8cfbe;font-size:16px;line-height:1.62;max-width:60ch;margin:0 0 24px}
+.gp-offer .offer b{color:var(--paper)}
+.gp-offer .btn{margin:0}
+.gp-offer .keep{color:#a89e8d;font-size:13px;margin:16px 0 0}
+@media (max-width:560px){
+  .gp-offer{padding:34px 22px}
+  .gp-offer h2{font-size:24px}
+  .gp-offer .judg{font-size:19px}
+  .loop .youhere{margin-left:52px;margin-top:0}
+}
 @media(max-width:560px){.doc{padding:48px 20px 72px}.stats{gap:18px}.distgrid,.grid2{grid-template-columns:1fr}.bar-lab{flex-basis:46%}}
 </style></head>
 <body>
 <div class="doc">
 
 <header>
-  <p class="kicker">Creative audit &middot; prepared for TYPEBEA</p>
-  <h1 class="brand">TYPEBEA<span class="pb">The Gap Playbook</span></h1>
-  <p class="intro">I pulled 112 of your live ads from your public Meta Ad Library and mapped them: every angle, audience, and awareness level in that batch. Here is what is working, where you are crowded, and the one gap with the highest odds of paying off.</p>
+  <p class="kicker">Creative audit &middot; prepared for TypeBea</p>
+  <h1 class="brand">TypeBea<span class="pb">The Gap Playbook</span></h1>
+  <p class="intro">I pulled all 112 ads you are running from your public Meta Ad Library and mapped them into 112 distinct creatives: every angle, avatar, and awareness level. This way we can see what is working and the open gaps with the highest odds of paying off.</p>
+  
   <div class="stats">
-    <div class="stat"><div class="n">75<small>/100</small></div><div class="l">Diversity score</div></div>
+    <div class="stat"><div class="n">75<small>%</small></div><div class="l">Diversity score</div></div>
     <div class="stat"><div class="n">112</div><div class="l">Live ads</div></div>
-    <div class="stat"><div class="n">11</div><div class="l">Winning ads</div></div>
+    <div class="stat"><div class="n">11</div><div class="l">Proven concepts</div></div>
   </div>
-  <p class="scorenote">Your diversity score is how widely the account spreads across audiences, awareness stages, angles, and formats. Your strongest area is format variety. Where you lose the most is coverage (how many audience-by-awareness boxes have an ad).</p>
+  <div class="scorenote"><p class="sn-h">Diversity Score Explained</p><p>You target 5 avatars. There are 5 awareness levels a buyer moves through, depending on where they start. That gives 25 boxes, and one box is one avatar at one level. You run ads in 13 of them, so your diversity score is 13 of 25, which is 52%. Every empty box is a gap you can fill, and the goal is to push it as high as possible. (This is your avatar x awareness coverage, not your creative x copy.)</p></div>
 </header>
 
 <div class="rule"></div>
 
 <section>
   <p class="kicker">The one finding that matters</p>
-  <p class="sting">Across the <span class="hot">112 ads I pulled</span>, almost nothing meets damaged / over-processed hair the moment they first feel the problem. <span class="hot">You skip the stage where they go looking for a reason.</span></p>
-</section>
-
-<section>
-  <p class="kicker">What is already working</p>
-  <h2>Your winning ads</h2>
-  <p class="mut">I can&rsquo;t see inside your ad account, so I rank winners the only honest way from the outside:
-  how long an ad has stayed live. The longer it runs, the more likely it is paying. Here are all <b>11</b>, longest-running first, broken down the four dials I mix to build ads:
-  <b>Concept, Angle, Style, Hook</b> (CASH), plus the avatar and awareness stage each one hits.</p>
-  <div class="bleed hwrap" style="--fade:var(--card)"><div class="tscroll"><table class="wt">
-    <thead><tr><th></th><th>Concept</th><th>Angle</th><th>Style</th><th>Hook</th><th>Hook type</th>
-    <th>Avatar</th><th>Awareness</th><th>Run</th><th></th></tr></thead>
-    <tbody><tr><td class="tp"><img class="tthumb" src="img/ad_1350627100294456.jpg" alt="" loading="lazy"></td><td class="tc" title="Rita Ora festival-performance b-roll positioning #1 Sephora growth serum">Rita Ora festival, &#x27;#1 Sephora growth serum&#x27;</td><td>Social Proof Led</td><td class="tf">Video &middot; Lifestyle montage</td><td class="th">&ldquo;The hair growth serum that everyone&#x27;s talking about&rdquo;</td><td>Authority Reaction</td><td>Thinning / shedding (growth-serum core)</td><td>Solution-aware</td><td class="tnum">36d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1350627100294456" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_4014110302055695.jpg" alt="" loading="lazy"></td><td class="tc" title="creator&#x27;s secret to voluminous unwashed hair via multi-benefit dry shampoo">&#x27;How I skip washing&#x27;, big-bouncy dry shampoo</td><td>Outcome Led</td><td class="tf">Video &middot; Creator talking to camera</td><td class="th">&ldquo;Okay, how do I keep my hair so big and bouncy and get away with not washing it for such a long time?&rdquo;</td><td>Curiosity</td><td>Fine / flat / greasy hair wanting volume (dry shampoo)</td><td>Solution-aware</td><td class="tnum">33d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=4014110302055695" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_837344235725128.jpg" alt="" loading="lazy"></td><td class="tc" title="5-star reviewed G5 dry shampoo midweek refresh demo">Midweek refresh demo, 5-star G5 dry shampoo</td><td>Social Proof Led</td><td class="tf">Video &middot; Product demo</td><td class="th">&ldquo;Midweek refresh with G5&rdquo;</td><td>Relatability</td><td>Fine / flat / greasy hair wanting volume (dry shampoo)</td><td>Solution-aware</td><td class="tnum">33d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=837344235725128" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1294972849449142.jpg" alt="" loading="lazy"></td><td class="tc" title="Marie Claire award showcase for G4 Hydra-Gloss hair mask">Marie Claire award for the G4 gloss mask</td><td>Social Proof Led</td><td class="tf">Video &middot; Lifestyle montage</td><td class="th">&ldquo;WINNER G4 Hydra-Gloss Treatment Best Strengthening Intensive Hair Mask&rdquo;</td><td>Authority Reaction</td><td>Damaged / over-processed hair (repair, gloss, styling)</td><td>Product-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1294972849449142" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_2250340935793998.jpg" alt="" loading="lazy"></td><td class="tc" title="Rita Ora holds award-winning G1 serum, Marie Claire winner badge">Rita Ora holds the award-winning G1 serum</td><td>Authority Expert</td><td class="tf">Video &middot; Lifestyle montage</td><td class="th">&ldquo;WINNER G•1 Overnight Boosting Peptide - Best New Wash &amp; Care Product&rdquo;</td><td>Authority Reaction</td><td>Thinning / shedding (growth-serum core)</td><td>Solution-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=2250340935793998" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1010284998123337.jpg" alt="" loading="lazy"></td><td class="tc" title="split-screen product demo of overnight peptide serum with clinical + award proof">&#x27;Hair shedding happens&#x27;, split-screen demo</td><td>Problem Led</td><td class="tf">Video &middot; Product demo</td><td class="th">&ldquo;HAIR SHEDDING HAPPENS&rdquo;</td><td>Problem Led</td><td>Thinning / shedding (growth-serum core)</td><td>Problem-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1010284998123337" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1527250809013427.jpg" alt="" loading="lazy"></td><td class="tc" title="satisfying R4 leave-in pump close-up with 80%-less-breakage claim">R4 leave-in, &#x27;80% less breakage&#x27; close-up</td><td>Mechanism Led</td><td class="tf">Video &middot; Product demo</td><td class="th">&ldquo;NEW R-4 INTENSE REPAIR LEAVE-IN TREATMENT 80% LESS HAIR BREAKAGE AFTER ONE USE&rdquo;</td><td>Bold Claim</td><td>Damaged / over-processed hair (repair, gloss, styling)</td><td>Solution-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1527250809013427" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1762043004954550.jpg" alt="" loading="lazy"></td><td class="tc" title="model holds G1 serum with Vogue + Marie Claire award badges">&#x27;The serum beauty editors love&#x27;, award badges</td><td>Social Proof Led</td><td class="tf">Static &middot; Product shot</td><td class="th">&ldquo;The hair growth serum beauty editors love - FOR LESS THINNING + MORE GROWTH&rdquo;</td><td>Authority Reaction</td><td>Thinning / shedding (growth-serum core)</td><td>Solution-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1762043004954550" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_2063606391170526.jpg" alt="" loading="lazy"></td><td class="tc" title="G1 serum on bathroom shelf, 5-star 1000+ reviews badge, hair-fallout hook">&#x27;Hair falling out?&#x27; 1000+ five-star reviews</td><td>Problem Led</td><td class="tf">Static &middot; Product shot</td><td class="th">&ldquo;Hair Falling Out? WE CAN HELP&rdquo;</td><td>Problem Led</td><td>Thinning / shedding (growth-serum core)</td><td>Problem-aware</td><td class="tnum">32d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=2063606391170526" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_1020918700681318.jpg" alt="" loading="lazy"></td><td class="tc" title="back-of-head long-hair hero with Marie Claire winner badge for G1">Long-hair hero, Marie Claire winner badge</td><td>Social Proof Led</td><td class="tf">Static &middot; Product shot</td><td class="th">&ldquo;Award Winning Hair Care - Approved by the best in the business&rdquo;</td><td>Authority Reaction</td><td>Broad / aspirational (routine, sitewide sale)</td><td>Product-aware</td><td class="tnum">31d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=1020918700681318" target="_blank" rel="noopener">Ad &#8599;</a></td></tr><tr><td class="tp"><img class="tthumb" src="img/ad_984046911000347.jpg" alt="" loading="lazy"></td><td class="tc" title="creator&#x27;s greasy-before + top beauty tip: 3-in-1 dry shampoo volume/growth">&#x27;Reminder of the before&#x27;, greasy-to-volume</td><td>Curiosity Secret</td><td class="tf">Video &middot; Before / after video</td><td class="th">&ldquo;Just a reminder of the before, please.&rdquo;</td><td>Before After</td><td>Fine / flat / greasy hair wanting volume (dry shampoo)</td><td>Solution-aware</td><td class="tnum">30d</td><td><a class="tbtn" href="https://www.facebook.com/ads/library/?id=984046911000347" target="_blank" rel="noopener">Ad &#8599;</a></td></tr></tbody>
-  </table></div><div class="swipehint">Swipe to see every column &#8594;</div></div>
+  <p class="sting">You are running <span class="hot">112 distinct creatives</span>. Almost nothing meets damaged / over-processed hair the moment they first feel the problem. <span class="hot">You skip the level where they go looking for a reason.</span></p>
 </section>
 
 <section>
   <p class="kicker">Your account, mapped</p>
   <h2>The Creative Diversity Matrix</h2>
-  <p class="mut">Avatars down the side, awareness stages across the top. Every ad you run lands in one box. The
-  goal is simple: fill the gaps.</p>
-  <div class="hwrap"><div class="mx-wrap"><table class="mx"><tr><th class="corner">Avatar</th><th class="">Unaware</th><th class="gapcol">Problem-aware</th><th class="">Solution-aware</th><th class="">Product-aware</th><th class="">Most-aware</th></tr><tr><th class="rowlab">Thinning / shedding (growth-serum core)</th><td class="c-empty"></td><td class="c-proven">4</td><td class="c-proven">27</td><td class="c-testing">7</td><td class="c-empty"></td></tr><tr><th class="rowlab">Fine / flat / greasy hair wanting volume (dry shampoo)</th><td class="c-empty"></td><td class="c-testing">1</td><td class="c-proven">13</td><td class="c-empty"></td><td class="c-empty"></td></tr><tr><th class="rowlab">Damaged / over-processed hair (repair, gloss, styling)</th><td class="c-empty"></td><td class="c-empty gapcol"></td><td class="c-proven">15</td><td class="c-proven">11</td><td class="c-empty"></td></tr><tr><th class="rowlab">Busy / active / traveling women (gym + on-the-go)</th><td class="c-empty"></td><td class="c-testing">5</td><td class="c-testing">6</td><td class="c-testing">6</td><td class="c-empty"></td></tr><tr><th class="rowlab">Broad / aspirational (routine, sitewide sale)</th><td class="c-empty"></td><td class="c-empty"></td><td class="c-testing">8</td><td class="c-proven">7</td><td class="c-testing">2</td></tr></table></div><div class="swipehint">Swipe across the stages &#8594;</div></div>
+  <p class="mut">Every row below is the same person wanting one thing: <b>visibly thicker hair from a serum that actually works</b>. Every column is how close they are to buying it. Every creative you run maps to a box. The goal is simple: fill the gaps. <b>Click any box to see the ads inside it.</b></p>
+  <div class="hwrap"><div class="mx-wrap"><table class="mx"><tr><th class="corner">Avatar</th><th class="">Unaware</th><th class="gapcol">Problem-aware</th><th class="">Solution-aware</th><th class="">Product-aware</th><th class="">Most-aware</th></tr><tr><th class="rowlab">Thinning / shedding (growth-serum core)</th><td class="c-empty mxcell" data-av="Thinning / shedding (growth-serum core)" data-aw="Unaware"></td><td class="c-proven mxcell" data-av="Thinning / shedding (growth-serum core)" data-aw="Problem-aware">4</td><td class="c-proven mxcell" data-av="Thinning / shedding (growth-serum core)" data-aw="Solution-aware">27</td><td class="c-testing mxcell" data-av="Thinning / shedding (growth-serum core)" data-aw="Product-aware">7</td><td class="c-empty mxcell" data-av="Thinning / shedding (growth-serum core)" data-aw="Most-aware"></td></tr><tr><th class="rowlab">Fine / flat / greasy hair wanting volume (dry shampoo)</th><td class="c-empty mxcell" data-av="Fine / flat / greasy hair wanting volume (dry shampoo)" data-aw="Unaware"></td><td class="c-testing mxcell" data-av="Fine / flat / greasy hair wanting volume (dry shampoo)" data-aw="Problem-aware">1</td><td class="c-proven mxcell" data-av="Fine / flat / greasy hair wanting volume (dry shampoo)" data-aw="Solution-aware">13</td><td class="c-empty mxcell" data-av="Fine / flat / greasy hair wanting volume (dry shampoo)" data-aw="Product-aware"></td><td class="c-empty mxcell" data-av="Fine / flat / greasy hair wanting volume (dry shampoo)" data-aw="Most-aware"></td></tr><tr><th class="rowlab">Damaged / over-processed hair (repair, gloss, styling)</th><td class="c-empty mxcell" data-av="Damaged / over-processed hair (repair, gloss, styling)" data-aw="Unaware"></td><td class="c-empty gapcol mxcell" data-av="Damaged / over-processed hair (repair, gloss, styling)" data-aw="Problem-aware"></td><td class="c-proven mxcell" data-av="Damaged / over-processed hair (repair, gloss, styling)" data-aw="Solution-aware">15</td><td class="c-proven mxcell" data-av="Damaged / over-processed hair (repair, gloss, styling)" data-aw="Product-aware">11</td><td class="c-empty mxcell" data-av="Damaged / over-processed hair (repair, gloss, styling)" data-aw="Most-aware"></td></tr><tr><th class="rowlab">Busy / active / traveling women (gym + on-the-go)</th><td class="c-empty mxcell" data-av="Busy / active / traveling women (gym + on-the-go)" data-aw="Unaware"></td><td class="c-testing mxcell" data-av="Busy / active / traveling women (gym + on-the-go)" data-aw="Problem-aware">5</td><td class="c-testing mxcell" data-av="Busy / active / traveling women (gym + on-the-go)" data-aw="Solution-aware">6</td><td class="c-testing mxcell" data-av="Busy / active / traveling women (gym + on-the-go)" data-aw="Product-aware">6</td><td class="c-empty mxcell" data-av="Busy / active / traveling women (gym + on-the-go)" data-aw="Most-aware"></td></tr><tr><th class="rowlab">Broad / aspirational (routine, sitewide sale)</th><td class="c-empty mxcell" data-av="Broad / aspirational (routine, sitewide sale)" data-aw="Unaware"></td><td class="c-empty mxcell" data-av="Broad / aspirational (routine, sitewide sale)" data-aw="Problem-aware"></td><td class="c-testing mxcell" data-av="Broad / aspirational (routine, sitewide sale)" data-aw="Solution-aware">8</td><td class="c-proven mxcell" data-av="Broad / aspirational (routine, sitewide sale)" data-aw="Product-aware">7</td><td class="c-testing mxcell" data-av="Broad / aspirational (routine, sitewide sale)" data-aw="Most-aware">2</td></tr></table></div><div class="swipehint">Swipe across the levels &#8594;</div></div>
+  
   <div class="legend">
-    <span><span class="sw" style="background:var(--ink)"></span>Proven ad here</span>
+    <span><span class="sw" style="background:var(--ink)"></span>Proven creative here</span>
     <span><span class="sw" style="background:#e7c9bf"></span>Testing</span>
     <span><span class="sw" style="background:#ece5d7"></span>Nothing running</span>
     <span><span class="sw" style="background:#f2e3df;border:1px solid #e7b8ac"></span>The gap</span>
   </div>
-  <p style="margin-top:18px">You cover <b>13 of 25</b> boxes, and your
-  busiest lane holds <b>24.1%</b> of your ads. That is healthy spread. Your biggest opening is Damaged / over-processed hair (repair, gloss, styling) x Problem-Aware. And your entire Unaware column is empty.</p>
+  <p style="margin-top:18px">You cover <b>13 of 25</b> boxes, a
+  <b>52%</b> score. Here is a simple benchmark:</p>
+  <div class="tiers"><div class="tier t0"><span class="tlet">D</span><span class="trng">0-19%</span></div><div class="tier t1"><span class="tlet">C</span><span class="trng">20-39%</span></div><div class="tier t2 on"><span class="tpct">You: 52%</span><span class="tlet">B</span><span class="trng">40-59%</span></div><div class="tier t3"><span class="tlet">A</span><span class="trng">60-79%</span></div><div class="tier t4"><span class="tlet">S</span><span class="trng">80%+</span></div></div>
+  <p style="margin-top:0">That puts you at <b>B tier</b>. <b>B tier</b> starts at 40%, which is
+  problem-aware and solution-aware covered for every avatar, the foundation to build. Product-aware for each
+  avatar is the easiest push up from there. The exact moves to raise it, in order, are below.</p>
 </section>
 
 <section>
-  <p class="kicker">By the numbers</p>
-  <h2>How your account actually breaks down</h2>
-  <p class="mut">Straight from the ads, no interpretation. This is the objective shape of what you run.</p>
-  <div class="distgrid">
-    <div class="distcard full"><div class="dist-h">By awareness stage</div><div class="bar-row"><div class="bar-lab hot">Unaware</div><div class="bar-track"><div class="bar-fill zero" style="width:3%"></div></div><div class="bar-pct">0.0%</div></div><div class="bar-row"><div class="bar-lab">Problem-Aware</div><div class="bar-track"><div class="bar-fill" style="width:8.9%"></div></div><div class="bar-pct">8.9%</div></div><div class="bar-row"><div class="bar-lab">Solution-Aware</div><div class="bar-track"><div class="bar-fill" style="width:61.6%"></div></div><div class="bar-pct">61.6%</div></div><div class="bar-row"><div class="bar-lab">Product-Aware</div><div class="bar-track"><div class="bar-fill" style="width:27.7%"></div></div><div class="bar-pct">27.7%</div></div><div class="bar-row"><div class="bar-lab">Most-Aware</div><div class="bar-track"><div class="bar-fill" style="width:1.8%"></div></div><div class="bar-pct">1.8%</div></div></div>
-    <div class="distcard"><div class="dist-h">By avatar</div><div class="bar-row"><div class="bar-lab">Thinning / shedding (growth-serum core)</div><div class="bar-track"><div class="bar-fill" style="width:33.9%"></div></div><div class="bar-pct">33.9%</div></div><div class="bar-row"><div class="bar-lab">Damaged / over-processed hair (repair, gloss, styling)</div><div class="bar-track"><div class="bar-fill" style="width:23.2%"></div></div><div class="bar-pct">23.2%</div></div><div class="bar-row"><div class="bar-lab">Busy / active / traveling women (gym + on-the-go)</div><div class="bar-track"><div class="bar-fill" style="width:15.2%"></div></div><div class="bar-pct">15.2%</div></div><div class="bar-row"><div class="bar-lab">Broad / unsegmented</div><div class="bar-track"><div class="bar-fill" style="width:15.2%"></div></div><div class="bar-pct">15.2%</div></div><div class="bar-row"><div class="bar-lab">Fine / flat / greasy hair wanting volume (dry shampoo)</div><div class="bar-track"><div class="bar-fill" style="width:12.5%"></div></div><div class="bar-pct">12.5%</div></div></div>
-    <div class="distcard"><div class="dist-h">By format</div><div class="bar-row"><div class="bar-lab">Product demo</div><div class="bar-track"><div class="bar-fill" style="width:39.3%"></div></div><div class="bar-pct">39.3%</div></div><div class="bar-row"><div class="bar-lab">Lifestyle montage</div><div class="bar-track"><div class="bar-fill" style="width:19.6%"></div></div><div class="bar-pct">19.6%</div></div><div class="bar-row"><div class="bar-lab">Creator talking to camera</div><div class="bar-track"><div class="bar-fill" style="width:11.6%"></div></div><div class="bar-pct">11.6%</div></div><div class="bar-row"><div class="bar-lab">Testimonial image</div><div class="bar-track"><div class="bar-fill" style="width:8.0%"></div></div><div class="bar-pct">8.0%</div></div><div class="bar-row"><div class="bar-lab">Feature callout</div><div class="bar-track"><div class="bar-fill" style="width:7.1%"></div></div><div class="bar-pct">7.1%</div></div><div class="bar-row"><div class="bar-lab">Product shot</div><div class="bar-track"><div class="bar-fill" style="width:4.5%"></div></div><div class="bar-pct">4.5%</div></div></div>
+  <p class="kicker">Who your ads talk to</p>
+  <h2>Your avatars</h2>
+  <p class="mut">Built from your ads. The core desire, the emotional angles they reach each
+  avatar from, and at what awareness levels.</p>
+  <div class="bleed"><div class="avgrid"><div class="avrow" style="--c:3"><div class="avcard"><div class="av-head"><span class="av-k">Avatar 01</span><span class="ghost">01</span></div><h3>Thinning / shedding (growth-serum core)</h3><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="proven" title="Problem-Aware: 4 creatives, proven"></i><i class="proven" title="Solution-Aware: 27 creatives, proven"></i><i class="testing" title="Product-Aware: 7 creatives"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 3 of 5 awareness levels</span><span>38 ad-slots &middot; 38 creatives</span></div></div><div class="avcard"><div class="av-head"><span class="av-k">Avatar 02</span><span class="ghost">02</span></div><h3>Fine / flat / greasy hair wanting volume (dry shampoo)</h3><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="testing" title="Problem-Aware: 1 creative"></i><i class="proven" title="Solution-Aware: 13 creatives, proven"></i><i class="empty" title="Product-Aware: nothing running"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 2 of 5 awareness levels</span><span>14 ad-slots &middot; 14 creatives</span></div></div><div class="avcard"><div class="av-head"><span class="av-k">Avatar 03</span><span class="ghost">03</span></div><h3>Damaged / over-processed hair (repair, gloss, styling)</h3><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="empty" title="Problem-Aware: nothing running"></i><i class="proven" title="Solution-Aware: 15 creatives, proven"></i><i class="proven" title="Product-Aware: 11 creatives, proven"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 2 of 5 awareness levels</span><span>26 ad-slots &middot; 26 creatives</span></div></div></div><div class="avrow" style="--c:2"><div class="avcard"><div class="av-head"><span class="av-k">Avatar 04</span><span class="ghost">04</span></div><h3>Busy / active / traveling women (gym + on-the-go)</h3><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="testing" title="Problem-Aware: 5 creatives"></i><i class="testing" title="Solution-Aware: 6 creatives"></i><i class="testing" title="Product-Aware: 6 creatives"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 3 of 5 awareness levels</span><span>17 ad-slots &middot; 17 creatives</span></div></div><div class="avcard"><div class="av-head"><span class="av-k">Avatar 05</span><span class="ghost">05</span></div><h3>Broad / aspirational (routine, sitewide sale)</h3><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="empty" title="Problem-Aware: nothing running"></i><i class="testing" title="Solution-Aware: 8 creatives"></i><i class="proven" title="Product-Aware: 7 creatives, proven"></i><i class="testing" title="Most-Aware: 2 creatives"></i></div><div class="av-foot"><span>Reached at 3 of 5 awareness levels</span><span>17 ad-slots &middot; 17 creatives</span></div></div></div></div></div>
+</section>
+
+<div class="rule"></div>
+<section>
+  <p class="kicker">What is already working</p>
+  <h2>Every distinct creative you run</h2>
+  <p class="mut">Each row is one distinct creative, with all its variations rolled into it (the count sits next to
+  the run-time). I can&rsquo;t see inside your account, so the only honest read from outside is how long it has
+  stayed live: the longer it runs, the more likely it is paying.</p>
+  <div class="bleed">
+  <div class="toolbar">
+    <label>Avatar <select id="fAvatar"><option value="">All avatars</option></select></label>
+    <label>Awareness <select id="fStage"><option value="">All levels</option></select></label>
+    <label>Show <select id="fShow"><option value="25">25</option><option value="50">50</option><option value="9999">All</option></select></label>
+    <span class="rr-key"><i class="rr proven"></i>Proven 30d+<i class="rr testing"></i>Testing &lt;30d</span>
+  </div>
+  <div class="adt-scroll"><table class="adt"><thead><tr>
+    <th></th><th>Concept</th><th>Angle</th><th>Style</th><th>Hook</th><th class="col-av">Avatar</th><th class="col-st">Awareness</th>
+    <th class="sortable" id="sortRun">Run <span id="sortArrow">&#8595;</span></th><th></th>
+  </tr></thead><tbody id="adBody"></tbody></table></div>
+  <p class="mut adt-count" id="adCount"></p>
   </div>
 </section>
 
 <section>
-  <p class="kicker">Your current mechanism</p>
-  <h2>The cause you blame, and the fix you credit</h2>
-  <div class="grid2">
-    <div class="mcard"><span class="mtag">The cause &middot; UMP</span><h4>What you blame</h4>
-      <p class="note">83 of 112 ads name a cause.</p><div class="mrow"><span>actives gap: hair loss / thinning at the follicle</span><span class="c">42 ads</span></div><div class="mrow"><span>routine breaks when you travel / gym</span><span class="c">15 ads</span></div><div class="mrow"><span>overwashing / grease flattens fine hair</span><span class="c">14 ads</span></div><div class="mrow"><span>heat / chemical / mechanical damage</span><span class="c">12 ads</span></div></div>
-    <div class="mcard"><span class="mtag">The fix &middot; UMS</span><h4>What you credit</h4>
-      <p class="note">The unique fix your ads repeat.</p><div class="mrow"><span>G1 Overnight Boosting Peptide (Baicapil)</span><span class="c">42 ads &middot; 38%</span></div><div class="mrow"><span>G5 3-in-1 dry shampoo (Baicapil)</span><span class="c">19 ads &middot; 17%</span></div><div class="mrow"><span>S1 Ultimate Styling Serum</span><span class="c">6 ads &middot; 5%</span></div><div class="mrow"><span>R4 Intense Repair (RDS Bond)</span><span class="c">3 ads &middot; 3%</span></div><div class="mrow"><span>G4 Hydra-Gloss Treatment</span><span class="c">3 ads &middot; 3%</span></div></div>
+  <p class="kicker">The other axis of diversity</p>
+  <h2>The objective data in your account</h2>
+  <p class="mut">The matrix shows which boxes to fill. This shows how your creative is built, by concept, style, and angle. Near-identical ads bucket together in Meta&rsquo;s auction, so the goal is to fill the gaps with ads different enough, and sharp enough, to stick.</p>
+  <div class="diststack">
+    <div class="distcard"><div class="dist-h">By concept</div><p class="dist-v"><b>26 distinct concepts</b> across your 26 creatives, close to a new idea per ad.</p><div class="bar-row"><div class="bar-lab">Rita Ora festival, &#x27;#1 Sephora growth serum&#x27;</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">&#x27;How I skip washing&#x27;, big-bouncy dry shampoo</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Midweek refresh demo, 5-star G5 dry shampoo</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Marie Claire award for the G4 gloss mask</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Rita Ora holds the award-winning G1 serum</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">&#x27;Hair shedding happens&#x27;, split-screen demo</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">R4 leave-in, &#x27;80% less breakage&#x27; close-up</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">&#x27;The serum beauty editors love&#x27;, award badges</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">&#x27;Hair falling out?&#x27; 1000+ five-star reviews</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Long-hair hero, Marie Claire winner badge</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">&#x27;Reminder of the before&#x27;, greasy-to-volume</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">host reveals customer DM before/afters proving G1 scalp-serum growth</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">hand holds TSA-clear travel kit over ocean, save up to 35% on kits</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">satisfying close-up of R4 leave-in cream dripping down a glass shelf</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">quick workout-to-workday refresh with 3-in-1 dry shampoo on the go</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">aesthetic packing montage positioning travel-sized growth kit as essential</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">satisfying overnight peptide serum application + comb-through demo</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">back-in-stock restock announcement for the growth range</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Sabrina Carpenter blowout tutorial using TYPEBEA styling range</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">ASMR aesthetic daily routine + travel-prep montage for long healthy hair</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">checklist grid: 100ml/$80/results-after-1-bottle vs rivals&#x27; 30ml/$105</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">G1 serum + Baicapil complex callout with before/after and 60% claim</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">step-by-step G+2 hair-mist application + styling demo</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">step-by-step overnight peptide serum application on curly hair</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">curly-hair model + S1 styling serum callout for frizz/split ends</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Fourth of July 25% off sitewide sale with social proof + press</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div></div>
+    <div class="distcard"><div class="dist-h">By style</div><p class="dist-v"><b>Product demo</b> is your most-run format, 35% of your creative.</p><div class="bar-row"><div class="bar-lab">Product demo</div><div class="bar-track"><div class="bar-fill" style="width:34.6%"></div></div><div class="bar-pct">34.6%</div></div><div class="bar-row"><div class="bar-lab">Lifestyle montage</div><div class="bar-track"><div class="bar-fill" style="width:23.1%"></div></div><div class="bar-pct">23.1%</div></div><div class="bar-row"><div class="bar-lab">Product shot</div><div class="bar-track"><div class="bar-fill" style="width:11.5%"></div></div><div class="bar-pct">11.5%</div></div><div class="bar-row"><div class="bar-lab">Creator talking to camera</div><div class="bar-track"><div class="bar-fill" style="width:7.7%"></div></div><div class="bar-pct">7.7%</div></div><div class="bar-row"><div class="bar-lab">Before / after video</div><div class="bar-track"><div class="bar-fill" style="width:7.7%"></div></div><div class="bar-pct">7.7%</div></div><div class="bar-row"><div class="bar-lab">Feature callout</div><div class="bar-track"><div class="bar-fill" style="width:7.7%"></div></div><div class="bar-pct">7.7%</div></div><div class="bar-row"><div class="bar-lab">Offer / discount</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Us-vs-them image</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div></div>
+    <div class="distcard"><div class="dist-h">By angle</div><p class="dist-v"><b>Outcome Led</b> is your most-run angle, 35% of your creative.</p><div class="bar-row"><div class="bar-lab">Outcome Led</div><div class="bar-track"><div class="bar-fill" style="width:34.6%"></div></div><div class="bar-pct">34.6%</div></div><div class="bar-row"><div class="bar-lab">Social Proof Led</div><div class="bar-track"><div class="bar-fill" style="width:23.1%"></div></div><div class="bar-pct">23.1%</div></div><div class="bar-row"><div class="bar-lab">Problem Led</div><div class="bar-track"><div class="bar-fill" style="width:11.5%"></div></div><div class="bar-pct">11.5%</div></div><div class="bar-row"><div class="bar-lab">Mechanism Led</div><div class="bar-track"><div class="bar-fill" style="width:11.5%"></div></div><div class="bar-pct">11.5%</div></div><div class="bar-row"><div class="bar-lab">Authority Expert</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Curiosity Secret</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Urgency Fomo</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Comparison Led</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div><div class="bar-row"><div class="bar-lab">Price Value</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-pct">3.8%</div></div></div>
   </div>
-  <p class="summary">Only <b>83 of 112</b> ads name a specific cause. People believe a promise far more when they understand the reason behind it. Pick one clear cause, own it, and repeat it in every ad.</p>
 </section>
 
 <section>
-  <p class="kicker">Where the traffic goes</p>
-  <h2>Funnel pages, ranked</h2>
-  <p class="mut">Ranked by how many ads point to each and how long they run. It shows what you trust, and what you
-  have not tried yet.</p>
-  <div class="funnel"><div class="frow"><span class="ptype">Product page</span><span class="fname">Overnight Boosting Peptide 1</span><span class="fmeta">13 ads &middot; up to 36d</span><a class="tbtn" href="https://au.typebea.com/products/overnight-boosting-peptide-1" target="_blank" rel="noopener">Open &#8599;</a></div><div class="frow"><span class="ptype">Product page</span><span class="fname">Overnight Boosting Peptide 1</span><span class="fmeta">12 ads &middot; up to 32d</span><a class="tbtn" href="https://uk.typebea.com/products/overnight-boosting-peptide-1" target="_blank" rel="noopener">Open &#8599;</a></div><div class="frow"><span class="ptype">Product page</span><span class="fname">3 In 1 Dry Shampoo</span><span class="fmeta">9 ads &middot; up to 33d</span><a class="tbtn" href="https://au.typebea.com/products/3-in-1-dry-shampoo" target="_blank" rel="noopener">Open &#8599;</a></div><div class="frow"><span class="ptype">Landing page</span><span class="fname">Made To Move</span><span class="fmeta">7 ads &middot; up to 15d</span><a class="tbtn" href="https://uk.typebea.com/collections/made-to-move" target="_blank" rel="noopener">Open &#8599;</a></div><div class="frow"><span class="ptype">Product page</span><span class="fname">Overnight Boosting Peptide 1</span><span class="fmeta">7 ads &middot; up to 15d</span><a class="tbtn" href="https://us.typebea.com/products/overnight-boosting-peptide-1" target="_blank" rel="noopener">Open &#8599;</a></div><div class="frow"><span class="ptype">Product page</span><span class="fname">3 In 1 Dry Shampoo</span><span class="fmeta">6 ads &middot; up to 33d</span><a class="tbtn" href="https://uk.typebea.com/products/3-in-1-dry-shampoo" target="_blank" rel="noopener">Open &#8599;</a></div></div>
-  <p class="summary">You send most traffic to product pages, landing pages. I do not see any advertorials in the mix, worth a look, not a prescription.</p>
+  <p class="kicker">What I would run next</p>
+  <h2>Your next moves, in order</h2>
+  <p class="mut">Not one ad, a sequence. Each move fills specific boxes on the matrix and climbs your
+  score. Build the foundation first, then take the big swing.</p>
+  <ol class="plays"><li class="play"><span class="pnum">01</span><div class="ptxt"><p class="pmove">Enter every avatar at the problem</p><p class="pdesc">Run a problem-aware hook for damaged / over-processed hair (repair, gloss, styling) and broad / aspirational (routine, sitewide sale). Right now no hook meets them the moment they first feel it, so a whole audience rides past. Get every avatar boarding before you deepen any of them.</p><p class="pscore">52% &#8594; 60%</p></div></li><li class="play"><span class="pnum">02</span><div class="ptxt"><p class="pmove">Open the Unaware level</p><p class="pdesc">With the foundation set, catch thinning / shedding (growth-serum core), fine / flat / greasy hair wanting volume (dry shampoo), and damaged / over-processed hair (repair, gloss, styling) before they feel the problem at all: the biggest untapped audience, the swing almost nobody in your market runs.</p><p class="pscore">your biggest new audience</p></div></li><li class="play"><span class="pnum">03</span><div class="ptxt"><p class="pmove">Deepen the proven avatars</p><p class="pdesc">Then extend into product-aware and most-aware for the avatars already working, starting with fine / flat / greasy hair wanting volume (dry shampoo), to climb past 60%.</p><p class="pscore">depth on your winners</p></div></li></ol>
 </section>
 
-<section>
-  <p class="kicker">The gap I would attack first</p>
-  <div class="attack">
-    <span class="tag">Highest-odds play</span>
-    <h3>Damaged / over-processed hair (repair, gloss, styling) x Problem-Aware</h3>
-    
-    <p style="margin:0">This play already works elsewhere in your account, just not for damaged / over-processed hair yet. A near-copy of the play already working elsewhere in your account is a high-odds test, close to something you have already proven.</p>
-  </div>
-  <p class="holdback">I found <b>12 gaps in total</b>, all ranked by odds. This is number one. I&rsquo;d
-  love to show you the other 11 and build the first ad to fill this one.</p>
-</section>
+<section class="gp-offer">
+  <p class="ck">The other half of the equation</p>
+  <h2>You don&rsquo;t have an ad problem.<br>It&rsquo;s a diversity problem.</h2>
+  <p class="lead">It&rsquo;s not your fault. Ever since Meta&rsquo;s algorithm update, near-identical ads get
+  grouped into one bucket.</p>
+  <p class="lead">Relaunching a winner, or running multiple versions of the same creative, does not buy you
+  more reach.</p>
+  <p class="lead">It buys you fatigue: frequency climbs, the audience tires, your CPA creeps up... until the
+  ad dies.</p>
+  <p class="lead">And you&rsquo;re back on square one, figuring out the next ad to run.</p>
+  <p class="lead">In 2026, AI can make ads in minutes. So the ads aren&rsquo;t the problem.</p>
 
-<div class="cta">
-  <h2>What I&rsquo;d test</h2>
-  <p>Your biggest next play is problem-aware ads for damaged / over-processed hair. It is a
-  high-odds move for a simple reason: you have already proven this audience buys. That play, plus tightening
-  every ad onto a single clear message, are the two biggest levers you are not pulling yet. Reply to my email
-  and I will build the first one in less than 24 hours.</p>
-  <a class="btn" href="/contact/">Fix the gap in 24 hours</a>
-</div>
+  <p class="judg">Judgment is. Knowing which ads to make next, and why.</p>
+  <p class="sub">I run a 5-part creative feedback loop to find your next winner.</p>
+
+  <ol class="loop">
+    <li class="step here">
+      <span class="dot">01</span>
+      <div class="txt"><b>Brand audit</b><span>Your whole ad account, taken apart. Every concept, angle, style,
+      hook, avatar, and awareness level you hit. Mapping out the Creative Diversity Matrix.</span></div>
+      <span class="youhere">You are here</span>
+    </li>
+    <li class="step">
+      <span class="dot">02</span>
+      <div class="txt"><b>Customer voice document</b><span>I map out the core desire each avatar is buying,
+      plus their fears and private beliefs, in their exact words. New avatars and new angles come straight
+      out of it.</span></div>
+    </li>
+    <li class="step">
+      <span class="dot">03</span>
+      <div class="txt"><b>Simulated feed document</b><span>Everything they already hear from competitors, so you
+      know how sophisticated the market is and what they scroll past, tired of hearing.</span></div>
+    </li>
+    <li class="step">
+      <span class="dot">04</span>
+      <div class="txt"><b>Angles from data, not guesses</b><span>Now I build net-new ads from all the
+      foundational docs. Filling the gaps in the Creative Diversity Matrix. Fueling the creative flywheel.</span></div>
+    </li>
+    <li class="step">
+      <span class="dot">05</span>
+      <div class="txt"><b>Launch, learn, repeat</b><span>A compounding loop that gets sharper every round.
+      Not a one-off batch, a system that keeps finding the next round of winners.</span></div>
+    </li>
+  </ol>
+
+  <p class="offer">Pick a time below and I&rsquo;ll do steps two through four: I&rsquo;ll build and show you
+  the actual ads to run, so you can fill your gaps.</p>
+  <div class="cal-embed"><div class="calendly-inline-widget" data-url="https://calendly.com/ben-benlomon/the-gap-playbook?hide_gdpr_banner=1" style="min-width:320px;height:680px"></div></div><script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <p class="keep">Yours to keep, whether we work together or not.</p>
+</section>
 
 <div class="foot">
   <p><b>How to read this:</b> this is built entirely from your <b>public</b> Meta Ad Library, what is running and
   for how long, never your private cost, click or revenue numbers. "Working" means an ad is long-running or heavily
   scaled, which is a strong free signal, not confirmed profit. Treat the plays above as where I would test, not gospel.</p>
-  <p style="margin-top:10px">Prepared by <b>Ben Lomon</b> &middot; July 2026</p>
+  <p style="margin-top:10px">Prepared by <b>Ben Lomon</b> &middot; 2026-05-28</p>
 </div>
 
 </div>
+<div class="mxmodal" id="mxModal"><div class="mxm-card">
+  <div class="mxm-head"><span id="mxModalTitle"></span><button class="mxm-close" aria-label="Close">&times;</button></div>
+  <div class="mxm-body" id="mxModalBody"></div>
+</div></div>
+<script>window.__ADS__ = [{"img": "img/ad_1350627100294456.jpg", "concept": "Rita Ora festival, '#1 Sephora growth serum'", "angle": "Social Proof Led", "angletext": "", "style": "Lifestyle montage", "hooktype": "Authority Reaction", "hook": "The hair growth serum that everyone's talking about", "stage": "Solution-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 36, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1350627100294456", "versions": 4, "visuals": 4, "cells": [["Thinning / shedding (growth-serum core)", "Solution-aware"]]}, {"img": "img/ad_4014110302055695.jpg", "concept": "'How I skip washing', big-bouncy dry shampoo", "angle": "Outcome Led", "angletext": "", "style": "Creator talking to camera", "hooktype": "Curiosity", "hook": "Okay, how do I keep my hair so big and bouncy and get away with not washing it for such a long time?", "stage": "Solution-aware", "avatar": "Fine / flat / greasy hair wanting volume (dry shampoo)", "days": 33, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=4014110302055695", "versions": 3, "visuals": 3, "cells": [["Fine / flat / greasy hair wanting volume (dry shampoo)", "Solution-aware"]]}, {"img": "img/ad_837344235725128.jpg", "concept": "Midweek refresh demo, 5-star G5 dry shampoo", "angle": "Social Proof Led", "angletext": "", "style": "Product demo", "hooktype": "Relatability", "hook": "Midweek refresh with G5", "stage": "Solution-aware", "avatar": "Fine / flat / greasy hair wanting volume (dry shampoo)", "days": 33, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=837344235725128", "versions": 1, "visuals": 1, "cells": [["Fine / flat / greasy hair wanting volume (dry shampoo)", "Solution-aware"]]}, {"img": "img/ad_1294972849449142.jpg", "concept": "Marie Claire award for the G4 gloss mask", "angle": "Social Proof Led", "angletext": "", "style": "Lifestyle montage", "hooktype": "Authority Reaction", "hook": "WINNER G4 Hydra-Gloss Treatment Best Strengthening Intensive Hair Mask", "stage": "Product-aware", "avatar": "Damaged / over-processed hair (repair, gloss, styling)", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1294972849449142", "versions": 3, "visuals": 3, "cells": [["Damaged / over-processed hair (repair, gloss, styling)", "Product-aware"]]}, {"img": "img/ad_2250340935793998.jpg", "concept": "Rita Ora holds the award-winning G1 serum", "angle": "Authority Expert", "angletext": "", "style": "Lifestyle montage", "hooktype": "Authority Reaction", "hook": "WINNER G\u20221 Overnight Boosting Peptide - Best New Wash & Care Product", "stage": "Solution-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2250340935793998", "versions": 2, "visuals": 2, "cells": [["Thinning / shedding (growth-serum core)", "Solution-aware"]]}, {"img": "img/ad_1010284998123337.jpg", "concept": "'Hair shedding happens', split-screen demo", "angle": "Problem Led", "angletext": "", "style": "Product demo", "hooktype": "Problem Led", "hook": "HAIR SHEDDING HAPPENS", "stage": "Problem-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1010284998123337", "versions": 1, "visuals": 1, "cells": [["Thinning / shedding (growth-serum core)", "Problem-aware"]]}, {"img": "img/ad_1527250809013427.jpg", "concept": "R4 leave-in, '80% less breakage' close-up", "angle": "Mechanism Led", "angletext": "", "style": "Product demo", "hooktype": "Bold Claim", "hook": "NEW R-4 INTENSE REPAIR LEAVE-IN TREATMENT 80% LESS HAIR BREAKAGE AFTER ONE USE", "stage": "Solution-aware", "avatar": "Damaged / over-processed hair (repair, gloss, styling)", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1527250809013427", "versions": 1, "visuals": 1, "cells": [["Damaged / over-processed hair (repair, gloss, styling)", "Solution-aware"]]}, {"img": "img/ad_1762043004954550.jpg", "concept": "'The serum beauty editors love', award badges", "angle": "Social Proof Led", "angletext": "", "style": "Product shot", "hooktype": "Authority Reaction", "hook": "The hair growth serum beauty editors love - FOR LESS THINNING + MORE GROWTH", "stage": "Solution-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1762043004954550", "versions": 2, "visuals": 2, "cells": [["Thinning / shedding (growth-serum core)", "Solution-aware"]]}, {"img": "img/ad_2063606391170526.jpg", "concept": "'Hair falling out?' 1000+ five-star reviews", "angle": "Problem Led", "angletext": "", "style": "Product shot", "hooktype": "Problem Led", "hook": "Hair Falling Out? WE CAN HELP", "stage": "Problem-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2063606391170526", "versions": 1, "visuals": 1, "cells": [["Thinning / shedding (growth-serum core)", "Problem-aware"]]}, {"img": "img/ad_1020918700681318.jpg", "concept": "Long-hair hero, Marie Claire winner badge", "angle": "Social Proof Led", "angletext": "", "style": "Product shot", "hooktype": "Authority Reaction", "hook": "Award Winning Hair Care - Approved by the best in the business", "stage": "Product-aware", "avatar": "Broad / aspirational (routine, sitewide sale)", "days": 31, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1020918700681318", "versions": 2, "visuals": 2, "cells": [["Broad / aspirational (routine, sitewide sale)", "Product-aware"]]}, {"img": "img/ad_984046911000347.jpg", "concept": "'Reminder of the before', greasy-to-volume", "angle": "Curiosity Secret", "angletext": "", "style": "Before / after video", "hooktype": "Before After", "hook": "Just a reminder of the before, please.", "stage": "Solution-aware", "avatar": "Fine / flat / greasy hair wanting volume (dry shampoo)", "days": 30, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=984046911000347", "versions": 13, "visuals": 13, "cells": [["Fine / flat / greasy hair wanting volume (dry shampoo)", "Solution-aware"]]}, {"img": "img/ad_2036490820308003.jpg", "concept": "host reveals customer DM before/afters proving G1 scalp-serum growth", "angle": "Social Proof Led", "angletext": "", "style": "Before / after video", "hooktype": "Before After", "hook": "Look at these results that we've been receiving in our DMs recently.", "stage": "Problem-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 27, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2036490820308003", "versions": 1, "visuals": 1, "cells": [["Thinning / shedding (growth-serum core)", "Problem-aware"]]}, {"img": "img/ad_2459764217843697.jpg", "concept": "hand holds TSA-clear travel kit over ocean, save up to 35% on kits", "angle": "Outcome Led", "angletext": "", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "TRAVEL READY. Hair growth routine intact.", "stage": "Product-aware", "avatar": "Busy / active / traveling women (gym + on-the-go)", "days": 24, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2459764217843697", "versions": 7, "visuals": 7, "cells": [["Busy / active / traveling women (gym + on-the-go)", "Product-aware"]]}, {"img": "img/ad_1546315163806376.jpg", "concept": "satisfying close-up of R4 leave-in cream dripping down a glass shelf", "angle": "Mechanism Led", "angletext": "", "style": "Product demo", "hooktype": "Desire Led", "hook": "R.4 Intense Repair Leave-In Treatment POWERED BY RXB BOND", "stage": "Product-aware", "avatar": "Damaged / over-processed hair (repair, gloss, styling)", "days": 21, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1546315163806376", "versions": 2, "visuals": 2, "cells": [["Damaged / over-processed hair (repair, gloss, styling)", "Product-aware"]]}, {"img": "img/ad_27132801733044483.jpg", "concept": "quick workout-to-workday refresh with 3-in-1 dry shampoo on the go", "angle": "Problem Led", "angletext": "", "style": "Product demo", "hooktype": "Relatability", "hook": "POV: you have 30 seconds to take your hair from workout to workday", "stage": "Problem-aware", "avatar": "Busy / active / traveling women (gym + on-the-go)", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=27132801733044483", "versions": 3, "visuals": 3, "cells": [["Busy / active / traveling women (gym + on-the-go)", "Problem-aware"]]}, {"img": "img/ad_1485138992868411.jpg", "concept": "aesthetic packing montage positioning travel-sized growth kit as essential", "angle": "Outcome Led", "angletext": "", "style": "Lifestyle montage", "hooktype": "Desire Led", "hook": "TRAVEL ESSENTIALS WITH TYPEBEA", "stage": "Solution-aware", "avatar": "Busy / active / traveling women (gym + on-the-go)", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1485138992868411", "versions": 3, "visuals": 3, "cells": [["Busy / active / traveling women (gym + on-the-go)", "Solution-aware"]]}, {"img": "img/ad_1325008359140121.jpg", "concept": "satisfying overnight peptide serum application + comb-through demo", "angle": "Outcome Led", "angletext": "", "style": "Product demo", "hooktype": "Desire Led", "hook": "Healthy hair With Typebea", "stage": "Solution-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 15, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1325008359140121", "versions": 7, "visuals": 7, "cells": [["Thinning / shedding (growth-serum core)", "Solution-aware"]]}, {"img": "img/ad_1713458506591043.jpg", "concept": "back-in-stock restock announcement for the growth range", "angle": "Urgency Fomo", "angletext": "", "style": "Creator talking to camera", "hooktype": "Bold Claim", "hook": "THE VIRAL HAIR GROWTH BRAND THAT SOLD OUT IN SEPHORA IS BACK IN STOCK!", "stage": "Product-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 15, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1713458506591043", "versions": 1, "visuals": 1, "cells": [["Thinning / shedding (growth-serum core)", "Product-aware"]]}, {"img": "img/ad_1035554236096857.jpg", "concept": "Sabrina Carpenter blowout tutorial using TYPEBEA styling range", "angle": "Outcome Led", "angletext": "", "style": "Product demo", "hooktype": "Desire Led", "hook": "attempting the Sabrina Carpenter blowout at home", "stage": "Solution-aware", "avatar": "Damaged / over-processed hair (repair, gloss, styling)", "days": 15, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1035554236096857", "versions": 13, "visuals": 12, "cells": [["Damaged / over-processed hair (repair, gloss, styling)", "Solution-aware"]]}, {"img": "img/ad_27251621704499564.jpg", "concept": "ASMR aesthetic daily routine + travel-prep montage for long healthy hair", "angle": "Outcome Led", "angletext": "", "style": "Lifestyle montage", "hooktype": "Desire Led", "hook": "[ASMR aesthetic vanity setup, no spoken line]", "stage": "Solution-aware", "avatar": "Broad / aspirational (routine, sitewide sale)", "days": 15, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=27251621704499564", "versions": 10, "visuals": 10, "cells": [["Broad / aspirational (routine, sitewide sale)", "Solution-aware"]]}, {"img": "img/ad_1417092063774502.jpg", "concept": "checklist grid: 100ml/$80/results-after-1-bottle vs rivals' 30ml/$105", "angle": "Comparison Led", "angletext": "", "style": "Us-vs-them image", "hooktype": "Cost Comparison", "hook": "TYPEBEA Overnight Boosting Peptide vs Other hair growth brands", "stage": "Solution-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 14, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1417092063774502", "versions": 3, "visuals": 3, "cells": [["Thinning / shedding (growth-serum core)", "Solution-aware"]]}, {"img": "img/ad_1554770146253498.jpg", "concept": "G1 serum + Baicapil complex callout with before/after and 60% claim", "angle": "Mechanism Led", "angletext": "", "style": "Feature callout", "hooktype": "Myth Bust", "hook": "BAICAPIL COMPLEX - Clinically proven to reduce hair loss by 60% and boost density", "stage": "Solution-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 13, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1554770146253498", "versions": 2, "visuals": 1, "cells": [["Thinning / shedding (growth-serum core)", "Solution-aware"]]}, {"img": "img/ad_922434983470697.jpg", "concept": "step-by-step G+2 hair-mist application + styling demo", "angle": "Outcome Led", "angletext": "", "style": "Product demo", "hooktype": "Desire Led", "hook": "TYPEBEA G+2", "stage": "Product-aware", "avatar": "Damaged / over-processed hair (repair, gloss, styling)", "days": 3, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=922434983470697", "versions": 6, "visuals": 6, "cells": [["Damaged / over-processed hair (repair, gloss, styling)", "Product-aware"]]}, {"img": "img/ad_4372731376327377.jpg", "concept": "step-by-step overnight peptide serum application on curly hair", "angle": "Outcome Led", "angletext": "", "style": "Product demo", "hooktype": "Desire Led", "hook": "G.1 Overnight Boosting Peptide Hair Growth Serum", "stage": "Product-aware", "avatar": "Thinning / shedding (growth-serum core)", "days": 3, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=4372731376327377", "versions": 12, "visuals": 12, "cells": [["Thinning / shedding (growth-serum core)", "Product-aware"]]}, {"img": "img/ad_1791059778940789.jpg", "concept": "curly-hair model + S1 styling serum callout for frizz/split ends", "angle": "Outcome Led", "angletext": "", "style": "Feature callout", "hooktype": "Desire Led", "hook": "Seals split ends, smooths flyaways & visibly tames frizz", "stage": "Solution-aware", "avatar": "Damaged / over-processed hair (repair, gloss, styling)", "days": 3, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1791059778940789", "versions": 6, "visuals": 6, "cells": [["Damaged / over-processed hair (repair, gloss, styling)", "Solution-aware"]]}, {"img": "img/ad_1490818369377270.jpg", "concept": "Fourth of July 25% off sitewide sale with social proof + press", "angle": "Price Value", "angletext": "", "style": "Lifestyle montage", "hooktype": "Bold Claim", "hook": "AWARD WINNING FORMULAS", "stage": "Most-aware", "avatar": "Broad / aspirational (routine, sitewide sale)", "days": 1, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1490818369377270", "versions": 3, "visuals": 3, "cells": [["Broad / aspirational (routine, sitewide sale)", "Most-aware"]]}];</script>
 <script>
 (function(){
   document.querySelectorAll(".hwrap").forEach(function(w){
-    var sc=w.querySelector(".tscroll,.mx-wrap"); if(!sc) return;
+    var sc=w.querySelector(".mx-wrap"); if(!sc) return;
     function upd(){
       w.classList.toggle("can-scroll", sc.scrollWidth > sc.clientWidth + 4);
       w.classList.toggle("at-end", sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4);
     }
     sc.addEventListener("scroll", upd, {passive:true});
-    window.addEventListener("resize", upd);
-    upd();
+    window.addEventListener("resize", upd); upd();
   });
+  var ADS=window.__ADS__||[], body=document.getElementById("adBody"),
+      fAv=document.getElementById("fAvatar"), fSh=document.getElementById("fShow"),
+      fSt=document.getElementById("fStage"),
+      cnt=document.getElementById("adCount"), tbl=document.querySelector("table.adt");
+  if(body){
+    function cellsOf(a){ return a.cells||[[a.avatar,a.stage]]; }
+    var avs=[]; ADS.forEach(function(a){ cellsOf(a).forEach(function(c){ if(c[0]&&avs.indexOf(c[0])<0) avs.push(c[0]); }); });
+    avs.sort().forEach(function(v){ var o=document.createElement("option"); o.value=v; o.textContent=v; fAv.appendChild(o); });
+    ["Unaware","Problem-aware","Solution-aware","Product-aware","Most-aware"].forEach(function(s){
+      if(ADS.some(function(a){ return cellsOf(a).some(function(c){ return c[1]===s; }); })){ var o=document.createElement("option"); o.value=s; o.textContent=s; fSt.appendChild(o); }
+    });
+    function cell(t,cls){ var d=document.createElement("td"); if(cls)d.className=cls; d.textContent=t||""; return d; }
+    var sortDir=-1;
+    function render(){
+      var av=fAv.value, st=fSt.value, lim=parseInt(fSh.value,10);
+      if(tbl){ tbl.classList.toggle("no-av", !!av); tbl.classList.toggle("no-st", !!st); }
+      var rows=ADS.filter(function(a){ if(!av&&!st) return true; return cellsOf(a).some(function(c){ return (!av||c[0]===av) && (!st||c[1]===st); }); });
+      rows.sort(function(x,y){ return sortDir*(x.days-y.days); });
+      var total=rows.length; rows=rows.slice(0,lim);
+      body.innerHTML="";
+      rows.forEach(function(a){
+        var tr=document.createElement("tr");
+        var timg=document.createElement("td"); timg.className="c-thumb";
+        if(a.img){ var im=document.createElement("img"); im.src=a.img; im.loading="lazy"; im.alt=""; timg.appendChild(im); }
+        tr.appendChild(timg);
+        tr.appendChild(cell(a.concept,"c-concept"));
+        var an=document.createElement("td"); an.className="c-angle";
+        var ab=document.createElement("b"); ab.textContent=a.angle; an.appendChild(ab);
+        if(a.angletext){ var asp=document.createElement("span"); asp.textContent=a.angletext; an.appendChild(asp); }
+        tr.appendChild(an);
+        tr.appendChild(cell(a.style));
+        var hk=document.createElement("td"); hk.className="c-hook";
+        var b=document.createElement("b"); b.textContent=a.hooktype; hk.appendChild(b);
+        if(a.hook){ var sp=document.createElement("span"); sp.textContent="“"+a.hook+"”"; hk.appendChild(sp); }
+        tr.appendChild(hk);
+        tr.appendChild(cell(a.avatar,"col-av"));
+        tr.appendChild(cell(a.stage,"col-st"));
+        var dy=document.createElement("td"); var pill=document.createElement("span");
+        pill.className="days "+a.state; pill.textContent=a.days+"d"; dy.appendChild(pill);
+        if(a.versions>1){
+          var vb=document.createElement("span"); vb.className="vcount";
+          var vis=a.visuals||1;
+          if(vis<=1){ vb.textContent="↻"+a.versions; vb.title="same visual re-run as "+a.versions+" ad slots (near-duplicate, the kind Meta buckets and fatigues)"; }
+          else{ vb.textContent="×"+vis; vb.title=vis+" distinct visuals"+(a.versions>vis?(", run as "+a.versions+" ad slots"):"")+" under one message"; }
+          dy.appendChild(vb);
+        }
+        tr.appendChild(dy);
+        var ln=document.createElement("td");
+        if(a.link){ var x=document.createElement("a"); x.className="go"; x.href=a.link; x.target="_blank"; x.rel="noopener"; x.textContent="Ad ↗"; ln.appendChild(x); }
+        tr.appendChild(ln); body.appendChild(tr);
+      });
+      var suffix=" creatives"; if(av&&st) suffix+=" for "+av+" · "+st; else if(av) suffix+=" for "+av; else if(st) suffix+=" in "+st;
+      cnt.textContent="Showing "+rows.length+" of "+total+suffix+(sortDir<0?", longest-running first.":", newest first.");
+    }
+    var sortRun=document.getElementById("sortRun"), sortArrow=document.getElementById("sortArrow");
+    if(sortRun){ sortRun.addEventListener("click",function(){ sortDir=-sortDir; if(sortArrow)sortArrow.innerHTML=(sortDir<0?"↓":"↑"); render(); }); }
+    fAv.addEventListener("change",render); fSt.addEventListener("change",render); fSh.addEventListener("change",render); render();
+  }
+  // Matrix cell -> inline modal listing the creatives in that exact (avatar x level) box.
+  var _mc=function(a){ return a.cells||[[a.avatar,a.stage]]; };
+  var mM=document.getElementById("mxModal"), mT=document.getElementById("mxModalTitle"), mB=document.getElementById("mxModalBody");
+  if(mM){
+    document.querySelectorAll("td.mxcell").forEach(function(td){
+      td.addEventListener("click",function(){
+        var av=td.getAttribute("data-av"), aw=td.getAttribute("data-aw");
+        var hits=ADS.filter(function(a){ return _mc(a).some(function(c){ return c[0]===av && c[1]===aw; }); });
+        mT.textContent=av+"  ·  "+aw;
+        mB.innerHTML="";
+        if(!hits.length){ var e=document.createElement("p"); e.className="mxm-empty"; e.textContent="Nothing running here. This box is an open gap, an audience you are not reaching at this level."; mB.appendChild(e); }
+        else{
+          hits.sort(function(x,y){ return (y.days||0)-(x.days||0); });
+          hits.forEach(function(a){
+            var row=document.createElement("div"); row.className="mxm-row";
+            if(a.img){ var im=document.createElement("img"); im.src=a.img; im.loading="lazy"; im.alt=""; row.appendChild(im); }
+            var tx=document.createElement("div"); tx.className="mxm-tx";
+            var cc=document.createElement("p"); cc.className="mxm-c"; cc.textContent=a.concept||"(creative)"; tx.appendChild(cc);
+            if(a.hook){ var hh=document.createElement("p"); hh.className="mxm-h"; hh.textContent="“"+a.hook+"”"; tx.appendChild(hh); }
+            var mm=document.createElement("p"); mm.className="mxm-m";
+            var dp=document.createElement("span"); dp.className="mxm-day "+(a.state||"testing"); dp.textContent=(a.days||0)+"d live"; mm.appendChild(dp);
+            if(a.versions>1){ mm.appendChild(document.createTextNode(" · "+(a.visuals||a.versions)+" variations")); }
+            tx.appendChild(mm);
+            row.appendChild(tx);
+            if(a.link){ var go=document.createElement("a"); go.className="mxm-go"; go.href=a.link; go.target="_blank"; go.rel="noopener"; go.textContent="Ad ↗"; row.appendChild(go); }
+            mB.appendChild(row);
+          });
+        }
+        mM.classList.add("on"); document.body.classList.add("mx-lock"); mB.scrollTop=0;
+      });
+    });
+    function _closeMx(){ mM.classList.remove("on"); document.body.classList.remove("mx-lock"); }
+    mM.addEventListener("click",function(e){ if(e.target===mM||e.target.classList.contains("mxm-close")) _closeMx(); });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape") _closeMx(); });
+  }
 })();
 </script>
 </body></html>
