@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Cache-Control" content="no-store, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<title>DR.VEGAN: The Gap Playbook</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f4efe6;--card:#faf7f1;--ink:#191510;--mut:#6b6357;--line:#e2dccf;--accent:#d83a20;
+  --serif:"Fraunces",Georgia,serif;--sans:"Hanken Grotesk",system-ui,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  line-height:1.62;-webkit-font-smoothing:antialiased}
+.doc{max-width:720px;margin:0 auto;padding:72px 32px 96px}
+.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 14px}
+h1.brand{font-family:var(--serif);font-weight:600;font-size:clamp(40px,8vw,66px);line-height:1.02;letter-spacing:-.02em;margin:0}
+.brand .pb{display:block;font-style:italic;font-weight:400;color:var(--accent)}
+.intro{font-size:19px;margin:22px 0 0;max-width:56ch}
+.stats{display:flex;flex-wrap:wrap;gap:32px;margin:44px 0 0}
+.stat{flex:1 1 0;min-width:110px}
+.stat .n{font-family:var(--serif);font-weight:600;font-size:40px;letter-spacing:-.02em;line-height:1}
+.stat .n small{font-size:19px;color:var(--mut)}
+.stat .l{font-size:12.5px;color:var(--mut);margin-top:6px}
+.scorenote{margin:24px 0 0;font-size:14px;color:var(--mut);background:var(--card);padding:20px 24px;border-radius:12px;border:1px solid var(--line);border-left:3px solid var(--accent);box-shadow:0 2px 10px rgba(25,21,16,.05);line-height:1.62}
+.scorenote .sn-h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.scorenote p{margin:0;text-align:justify}
+.scorenote .sn-h{text-align:left}
+.scorenote b{color:var(--ink)}
+.rule{height:1px;background:var(--line);margin:56px 0}
+section{margin:56px 0}
+h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.14;letter-spacing:-.01em;margin:0 0 16px}
+p{font-size:16.5px;text-wrap:pretty}
+.intro,.scorenote p,.gp-offer .lead,.gp-offer .offer{text-wrap:pretty}
+.mut{color:var(--mut);margin-top:-4px}
+.sting{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4.6vw,36px);line-height:1.22;letter-spacing:-.01em;margin:0}
+.sting .hot{color:var(--accent)}
+/* winning-ads table (breaks out wider than the reading column) */
+.bleed{width:min(1280px,96vw);position:relative;left:50%;transform:translateX(-50%)}
+/* horizontal-scroll affordance: right-edge fade + swipe hint + momentum */
+.hwrap{position:relative;--fade:var(--paper)}
+.hwrap::after{content:"";position:absolute;top:0;bottom:0;right:0;width:48px;pointer-events:none;z-index:3;
+  border-radius:0 12px 12px 0;background:linear-gradient(to right,rgba(0,0,0,0),var(--fade));opacity:0;transition:opacity .25s}
+.hwrap.can-scroll::after{opacity:1}
+.hwrap.at-end::after{opacity:0}
+.swipehint{display:none;margin-top:10px;text-align:center;font-size:12px;letter-spacing:.04em;color:var(--mut)}
+@media(max-width:640px){.hwrap.can-scroll .swipehint{display:block}}
+.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table.wt{border-collapse:collapse;width:100%;min-width:940px;font-size:13px}
+table.wt th{text-align:left;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.wt td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+table.wt tbody tr:last-child td{border-bottom:none}
+table.wt tbody tr:hover{background:#f2ebdd}
+.tp{width:56px}
+.tthumb{width:44px;height:44px;object-fit:cover;border-radius:7px;background:#e7ddcd;display:block}
+.tf{white-space:nowrap;font-weight:600}
+.tc{max-width:200px;color:var(--mut)}
+.th{max-width:300px;min-width:190px}
+.tnum{white-space:nowrap;color:var(--mut);font-variant-numeric:tabular-nums}
+.tbtn{display:inline-block;font-size:11.5px;font-weight:700;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:4px 11px;white-space:nowrap}
+.tbtn:hover{border-color:var(--accent)}
+.mx-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:8px}
+table.mx{border-collapse:separate;border-spacing:4px;width:100%;min-width:520px}
+table.mx th{font-weight:600;color:var(--mut);font-size:12px;padding:6px 4px;text-align:center}
+table.mx th.rowlab{text-align:left;width:30%;color:var(--ink);font-size:13px}
+table.mx th.corner{text-align:left;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;vertical-align:bottom}
+table.mx th.gapcol{color:var(--accent)}
+table.mx td{text-align:center;height:46px;font-weight:700;font-size:14px;border-radius:4px}
+td.mxcell{cursor:pointer;transition:filter .12s,box-shadow .12s}
+td.mxcell:hover{filter:brightness(.93);box-shadow:inset 0 0 0 2px var(--accent)}
+.mxmodal{position:fixed;inset:0;background:rgba(25,21,16,.55);display:none;align-items:center;justify-content:center;z-index:200;padding:24px}
+.mxmodal.on{display:flex}
+body.mx-lock{overflow:hidden}
+.mxm-card{background:var(--paper);border-radius:16px;max-width:660px;width:100%;max-height:84vh;display:flex;flex-direction:column;box-shadow:0 24px 70px rgba(0,0,0,.35);overflow:hidden}
+.mxm-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-bottom:1px solid var(--line)}
+.mxm-head span{font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:-.01em}
+.mxm-close{border:none;background:none;font-size:28px;line-height:1;color:var(--mut);cursor:pointer;padding:0 2px}
+.mxm-close:hover{color:var(--ink)}
+.mxm-body{overflow-y:auto;padding:6px 24px 22px}
+.mxm-row{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.mxm-row:last-child{border-bottom:none}
+.mxm-row img{width:58px;height:58px;object-fit:cover;border-radius:9px;flex:none;background:var(--line)}
+.mxm-tx{flex:1;min-width:0}
+.mxm-c{font-weight:600;font-size:14.5px;margin:0 0 4px;color:var(--ink)}
+.mxm-h{font-size:13px;color:var(--mut);font-style:italic;margin:0 0 4px;line-height:1.4}
+.mxm-m{font-size:11.5px;color:var(--mut);margin:0;font-variant-numeric:tabular-nums}
+.mxm-day{display:inline-block;font-weight:700;font-size:11px;padding:2px 9px;border-radius:20px;margin-right:5px}
+.mxm-day.proven{background:var(--ink);color:var(--paper)}
+.mxm-day.testing{background:#e7c9bf;color:var(--accent)}
+.mxm-go{color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap;font-size:13px;flex:none}
+.mxm-empty{color:var(--mut);font-size:15px;line-height:1.5;padding:22px 0;margin:0}
+.c-proven{background:var(--ink);color:var(--paper)}
+.c-testing{background:#e7c9bf;color:var(--accent)}
+.c-empty{background:#ece5d7;color:transparent}
+td.gapcol.c-empty{background:repeating-linear-gradient(-45deg,#f2e3df,#f2e3df 5px,#f7ece9 5px,#f7ece9 10px);border:1px solid #e7b8ac}
+table.mx tr.broadrow td,table.mx tr.broadrow th{border-top:2px solid var(--line);padding-top:8px}
+table.mx tr.broadrow th.rowlab{color:var(--mut);font-style:italic;font-weight:500}
+/* catch-all cells: OUTLINED, never a solid avatar box, so broad reads as coverage-not-an-avatar. Clickable. */
+td.broadcell{background:transparent;color:var(--mut);box-shadow:inset 0 0 0 1.5px var(--line);font-weight:600}
+td.broadcell.pv{color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--mut)}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px;font-size:12.5px;color:var(--mut)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+/* distribution bars */
+.distgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.diststack{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.distcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.distcard.full{grid-column:1/-1}
+.dist-h{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--ink);margin-bottom:8px}
+.dist-v{font-size:13.5px;line-height:1.5;color:var(--mut);margin:0 0 14px;max-width:64ch}
+.dist-v b{color:var(--ink);font-weight:600}
+.bar-row{display:flex;align-items:center;gap:12px;margin:9px 0}
+.bar-lab{flex:0 0 42%;font-size:13px}
+.bar-lab.hot{color:var(--accent);font-weight:600}
+.bar-track{flex:1;height:10px;background:#e7ddcd;border-radius:6px;overflow:hidden}
+.bar-fill{height:100%;background:var(--accent);border-radius:6px}
+.bar-fill.zero{background:#e7b8ac}
+.bar-pct{flex:0 0 42px;text-align:right;font-size:12.5px;color:var(--mut);font-variant-numeric:tabular-nums}
+/* interactive "every ad" grid */
+.toolbar{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center;margin:6px 0 18px}
+.toolbar label{color:var(--mut);display:flex;gap:6px;align-items:center;font-size:13px}
+.toolbar select{font:inherit;font-size:13px;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.rr-key{margin-left:auto;color:var(--mut);display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;font-size:11.5px}
+.rr-key .rr{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:-1px}
+.rr.proven{background:var(--ink)}
+.rr.testing{background:#e7c9bf}
+/* diversity-score tier ladder: D..S, gradient fills, current tier ringed */
+.tiers{display:flex;gap:8px;margin:20px 0 16px;width:100%}
+.tier{flex:1;text-align:center;padding:16px 4px 13px;border-radius:10px;position:relative}
+.tier .tlet{display:block;font-family:var(--sans);font-weight:700;font-size:26px;line-height:1;letter-spacing:.01em}
+.tier .trng{display:block;font-size:11.5px;font-weight:600;margin-top:6px}
+.tier .tpct{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap}
+.tier.t0{background:#e6ddcc;color:var(--ink)}
+.tier.t1{background:#e6c3b6;color:var(--ink)}
+.tier.t2{background:#dba38a;color:var(--ink)}
+.tier.t3{background:#a8492b;color:#fff}
+.tier.t4{background:var(--ink);color:var(--paper)}
+.tier.on{outline:2.5px solid var(--ink);outline-offset:3px}
+.tier.t4.on{outline-color:var(--paper)}
+.adt{width:100%;border-collapse:collapse;font-size:13.5px}
+.adt th{text-align:left;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:0 12px 9px;border-bottom:1px solid var(--line)}
+.adt td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.4}
+.adt th.sortable{cursor:pointer;user-select:none;white-space:nowrap}
+.adt th.sortable:hover{color:var(--ink)}
+.adt .c-thumb{width:52px;padding-right:0}
+.adt .c-thumb img{width:44px;height:44px;object-fit:cover;border-radius:8px;display:block;background:var(--line)}
+.adt .c-concept{font-weight:500}
+.adt .c-hook b{display:block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.adt .c-hook span{color:var(--mut);font-style:italic}
+.adt .c-angle b{display:block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--accent);margin-bottom:3px}
+.adt .c-angle span{color:var(--mut)}
+.adt .c-angle{min-width:190px;max-width:250px}
+.adt .days{display:inline-block;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;padding:3px 10px;border-radius:20px;font-size:12px}
+.adt .days.proven{background:var(--ink);color:var(--paper)}
+.adt .days.testing{background:#e7c9bf;color:var(--accent)}
+.adt .vcount{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;color:var(--mut);font-variant-numeric:tabular-nums;cursor:help}
+.adt a.go{color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}
+.adt-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.avgrid{margin-top:18px}
+.avrow{display:grid;grid-template-columns:repeat(var(--c),1fr);gap:14px}
+.avrow+.avrow{margin-top:14px}
+@media(max-width:820px){.avrow{grid-template-columns:1fr}}
+.avcard{position:relative;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:20px 20px 16px;box-shadow:0 2px 10px rgba(25,21,16,.05);transition:transform .16s ease,box-shadow .16s ease;overflow:hidden}
+.avcard:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(25,21,16,.09)}
+.av-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.avcard .ghost{font-family:var(--serif);font-style:italic;font-weight:600;font-size:34px;line-height:.8;color:var(--ink);opacity:.09;pointer-events:none;flex:none}
+.av-k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700;margin:0}
+.avcard h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.22;letter-spacing:-.01em;margin:6px 0 10px}
+.av-desire{font-family:var(--serif);font-size:15.5px;line-height:1.35;color:var(--ink);font-style:italic;margin:3px 0 12px}
+.av-doorlab{margin:0 0 6px}
+.avchips{display:flex;flex-wrap:wrap;gap:6px}
+.avchips .chip{font-size:11px;padding:3px 10px;border:1px solid var(--line);border-radius:20px;color:var(--mut);background:var(--paper)}
+.avchips .chip.facet{border-color:var(--ink);color:var(--ink)}
+.avstrip{display:flex;gap:3px;margin:16px 0 7px}
+.avstrip i{flex:1;height:12px;border-radius:3px;background:#ece5d7}
+.avstrip i.testing{background:#e7c9bf}
+.avstrip i.proven{background:var(--ink)}
+.av-foot{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--mut)}
+.adt .col-av{color:var(--ink);font-weight:500;min-width:130px}
+.adt.no-av .col-av,.adt.no-st .col-st{display:none}
+.adt-count{font-size:12px;margin-top:14px}
+/* mechanism + funnel */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.mtag{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.mcard h4{font-family:var(--serif);font-weight:600;margin:5px 0 3px;font-size:17px}
+.mcard .note{font-size:12.5px;color:var(--mut);margin:0 0 12px}
+.mrow{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;padding:7px 0;border-top:1px solid var(--line)}
+.mrow .c{color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
+.mrow.tail span{color:var(--mut);font-style:italic;font-size:12.5px}
+.summary{margin-top:20px;font-size:16.5px}
+.frow{display:flex;align-items:center;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.frow:last-child{border-bottom:1px solid var(--line)}
+.ptype{flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:#efe7d8;color:var(--accent);padding:4px 10px;border-radius:20px}
+.fname{flex:1;font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fmeta{flex:0 0 auto;font-size:12.5px;color:var(--mut);white-space:nowrap}
+.attack{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:28px 30px;margin-top:8px}
+.attack .tag{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.attack h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:8px 0 12px}
+.plays{list-style:none;margin:22px 0 0;padding:0;counter-reset:none}
+.play{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--line)}
+.play:first-child{border-top:none}
+.play .pnum{font-family:var(--serif);font-style:italic;font-weight:600;font-size:30px;line-height:1;color:var(--accent);opacity:.5;min-width:38px}
+.play .ptxt{flex:1}
+.play .pmove{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:-.01em;margin:0 0 6px}
+.play .pdesc{color:var(--mut);font-size:15px;line-height:1.55;margin:0 0 8px;max-width:60ch}
+.play .pscore{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.02em;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:4px 12px;margin:0;font-variant-numeric:tabular-nums}
+.loomtop{margin:26px 0 4px}
+.loomtop-k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin:0 0 10px}
+.loom{position:relative;padding-bottom:56.25%;height:0;margin:6px 0 22px;border-radius:10px;overflow:hidden;background:#000}
+.loom iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.holdback{font-size:18px;margin-top:26px}
+.holdback b{color:var(--accent)}
+.cta{background:var(--ink);color:var(--paper);border-radius:14px;padding:44px 40px;margin-top:56px;text-align:center}
+.cta h2{color:var(--paper);margin:0 0 10px}
+.cta p{color:#d8cfbe;margin:0 auto 24px;max-width:48ch}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:16px;padding:15px 30px;border-radius:40px}
+.foot{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);color:var(--mut);font-size:13px}
+.foot b{color:var(--ink)}
+/* the sales close: sameness problem -> the 5-step loop (you-are-here) -> book */
+.gp-offer{background:var(--ink);color:var(--paper);border-radius:16px;padding:48px 44px;margin-top:60px}
+.cal-embed{background:#fff;border-radius:12px;overflow:hidden;margin-top:8px;box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.gp-offer .ck{color:var(--accent);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin:0 0 16px}
+.gp-offer h2{color:var(--paper);font-size:30px;line-height:1.16;margin:0 0 20px;max-width:24ch}
+.gp-offer .lead{color:#d8cfbe;font-size:17px;line-height:1.62;max-width:62ch;margin:0 0 16px}
+.gp-offer .lead b{color:var(--paper)}
+.gp-offer .judg{color:var(--paper);font-weight:700;font-size:22px;line-height:1.25;margin:38px 0 8px}
+.gp-offer .sub{color:#d8cfbe;font-size:15px;line-height:1.55;margin:0 0 28px;max-width:58ch}
+.loop{list-style:none;margin:0 0 32px;padding:0}
+.loop .step{position:relative;display:flex;flex-wrap:wrap;gap:16px;padding:0 0 24px}
+.loop .step:last-child{padding-bottom:0}
+.loop .step:not(:last-child)::before{content:"";position:absolute;left:17px;top:38px;bottom:2px;width:2px;background:#3b342a}
+.loop .dot{flex:none;width:36px;height:36px;border-radius:50%;border:2px solid #4a4238;background:var(--ink);color:#9a9082;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;z-index:1}
+.loop .step.here .dot{background:var(--accent);border-color:var(--accent);color:#fff}
+.loop .txt{flex:1;min-width:220px;padding-top:1px}
+.loop .txt b{display:block;color:var(--paper);font-size:16px;margin-bottom:3px}
+.loop .txt span{color:#c6bcaa;font-size:14px;line-height:1.5}
+.loop .youhere{flex:none;align-self:flex-start;margin-left:auto;margin-top:6px;background:var(--accent);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.gp-offer .offer{color:#d8cfbe;font-size:16px;line-height:1.62;max-width:60ch;margin:0 0 24px}
+.gp-offer .offer b{color:var(--paper)}
+.gp-offer .btn{margin:0}
+.gp-offer .keep{color:#a89e8d;font-size:13px;margin:16px 0 0}
+@media (max-width:560px){
+  .gp-offer{padding:34px 22px}
+  .gp-offer h2{font-size:24px}
+  .gp-offer .judg{font-size:19px}
+  .loop .youhere{margin-left:52px;margin-top:0}
+}
+@media(max-width:560px){.doc{padding:48px 20px 72px}.stats{gap:18px 14px}.stat{flex:1 1 40%}.distgrid,.grid2{grid-template-columns:1fr}.bar-lab{flex-basis:46%}}
+</style></head>
+<body>
+<div class="doc">
+
+<header>
+  <p class="kicker">Creative audit &middot; prepared for DR.VEGAN</p>
+  <h1 class="brand">DR.VEGAN<span class="pb">The Gap Playbook</span></h1>
+  <p class="intro">I pulled all 71 ads you are running from your public Meta Ad Library and mapped them into 61 distinct creatives: every angle, avatar, and awareness level.</p>
+  
+  <div class="stats">
+    <div class="stat"><div class="n">52<small>%</small></div><div class="l">Diversity score</div></div>
+    <div class="stat"><div class="n">71</div><div class="l">Live ads</div></div>
+    <div class="stat"><div class="n">61</div><div class="l">Distinct creatives</div></div>
+    <div class="stat"><div class="n">14</div><div class="l">Proven concepts</div></div>
+  </div>
+  <div class="scorenote"><p class="sn-h">Diversity Score Explained</p><p>You are running 71 live ads, with no variations in mind, that is 61 distinct creatives. Each one maps to a box. You target 5 avatars, and there are 5 awareness levels a buyer moves through depending on where they start, so that is 25 boxes, one per avatar per level. You have creative in 13 of those 25, so your diversity score is 13 of 25, which is 52%. Every empty box is a gap you can fill, and the goal is to push it as high as possible. (This measures avatar x awareness coverage, not creative x copy.)</p></div>
+</header>
+
+<div class="rule"></div>
+
+<section>
+  <p class="kicker">The one finding that matters</p>
+  <p class="sting">You are running <span class="hot">61 distinct creatives</span>. Almost none reach people with bloating while they weigh their options. <span class="hot">You go quiet right when they choose what to trust.</span></p>
+</section>
+
+<section>
+  <p class="kicker">Your account, mapped</p>
+  <h2>The Creative Diversity Matrix</h2>
+  <p class="mut">Every row is one of the avatars you target, and every column is an awareness level you reach them at. Every creative you run maps to a box. The goal is simple: fill the gaps. <b>Click any box to see the ads inside it.</b></p>
+  <div class="hwrap"><div class="mx-wrap"><table class="mx"><tr><th class="corner">Avatar</th><th class="">Unaware</th><th class="">Problem-aware</th><th class="gapcol">Solution-aware</th><th class="">Product-aware</th><th class="">Most-aware</th></tr><tr><th class="rowlab">Women who want a daily multivitamin</th><td class="c-empty mxcell" data-av="Women who want a daily multivitamin" data-aw="Unaware"></td><td class="c-proven mxcell" data-av="Women who want a daily multivitamin" data-aw="Problem-aware">7</td><td class="c-proven mxcell" data-av="Women who want a daily multivitamin" data-aw="Solution-aware">3</td><td class="c-proven mxcell" data-av="Women who want a daily multivitamin" data-aw="Product-aware">9</td><td class="c-empty mxcell" data-av="Women who want a daily multivitamin" data-aw="Most-aware"></td></tr><tr><th class="rowlab">Women who want fuller hair</th><td class="c-empty mxcell" data-av="Women who want fuller hair" data-aw="Unaware"></td><td class="c-proven mxcell" data-av="Women who want fuller hair" data-aw="Problem-aware">4</td><td class="c-proven mxcell" data-av="Women who want fuller hair" data-aw="Solution-aware">6</td><td class="c-empty mxcell" data-av="Women who want fuller hair" data-aw="Product-aware"></td><td class="c-empty mxcell" data-av="Women who want fuller hair" data-aw="Most-aware"></td></tr><tr><th class="rowlab">People with bloating</th><td class="c-empty mxcell" data-av="People with bloating" data-aw="Unaware"></td><td class="c-testing mxcell" data-av="People with bloating" data-aw="Problem-aware">3</td><td class="c-empty gapcol mxcell" data-av="People with bloating" data-aw="Solution-aware"></td><td class="c-proven mxcell" data-av="People with bloating" data-aw="Product-aware">4</td><td class="c-empty mxcell" data-av="People with bloating" data-aw="Most-aware"></td></tr><tr><th class="rowlab">People who want everyday health</th><td class="c-empty mxcell" data-av="People who want everyday health" data-aw="Unaware"></td><td class="c-testing mxcell" data-av="People who want everyday health" data-aw="Problem-aware">4</td><td class="c-proven mxcell" data-av="People who want everyday health" data-aw="Solution-aware">11</td><td class="c-proven mxcell" data-av="People who want everyday health" data-aw="Product-aware">2</td><td class="c-testing mxcell" data-av="People who want everyday health" data-aw="Most-aware">4</td></tr><tr><th class="rowlab">People who want to stay strong</th><td class="c-empty mxcell" data-av="People who want to stay strong" data-aw="Unaware"></td><td class="c-testing mxcell" data-av="People who want to stay strong" data-aw="Problem-aware">3</td><td class="c-empty mxcell" data-av="People who want to stay strong" data-aw="Solution-aware"></td><td class="c-testing mxcell" data-av="People who want to stay strong" data-aw="Product-aware">1</td><td class="c-empty mxcell" data-av="People who want to stay strong" data-aw="Most-aware"></td></tr></table></div><div class="swipehint">Swipe across the levels &#8594;</div></div>
+  
+  <div class="legend">
+    <span><span class="sw" style="background:var(--ink)"></span>Proven creative here</span>
+    <span><span class="sw" style="background:#e7c9bf"></span>Testing</span>
+    <span><span class="sw" style="background:#ece5d7"></span>Nothing running</span>
+    <span><span class="sw" style="background:#f2e3df;border:1px solid #e7b8ac"></span>The gap</span>
+  </div>
+  <p style="margin-top:18px">You cover <b>13 of 25</b> boxes, a
+  <b>52%</b> score. Here is a simple benchmark:</p>
+  <div class="tiers"><div class="tier t0"><span class="tlet">D</span><span class="trng">0-19%</span></div><div class="tier t1"><span class="tlet">C</span><span class="trng">20-39%</span></div><div class="tier t2 on"><span class="tpct">You: 52%</span><span class="tlet">B</span><span class="trng">40-59%</span></div><div class="tier t3"><span class="tlet">A</span><span class="trng">60-79%</span></div><div class="tier t4"><span class="tlet">S</span><span class="trng">80%+</span></div></div>
+  <p style="margin-top:0">That puts you at <b>B tier</b>. The tier is based on how many of the 25 boxes you fill.</p>
+</section>
+
+<section>
+  <p class="kicker">Who your ads talk to</p>
+  <h2>Your avatars</h2>
+  <p class="mut">Built from your ads. The core desire, the emotional angles they reach each
+  avatar from, and at what awareness levels.</p>
+  <div class="bleed"><div class="avgrid"><div class="avrow" style="--c:3"><div class="avcard"><div class="av-head"><span class="av-k">Avatar 01</span><span class="ghost">01</span></div><h3>Women who want a daily multivitamin</h3><p class="av-k">Core desire</p><p class="av-desire">complete daily nutrition tuned to a woman&#x27;s body</p><p class="av-k av-doorlab">Enters through</p><div class="avchips"><span class="chip">aspiration</span><span class="chip">authority</span><span class="chip">relief</span><span class="chip">curiosity</span><span class="chip">offer</span></div><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="proven" title="Problem-Aware: 7 creatives, proven"></i><i class="proven" title="Solution-Aware: 3 creatives, proven"></i><i class="proven" title="Product-Aware: 9 creatives, proven"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 3 of 5 awareness levels</span><span>20 live ads &middot; 19 distinct creatives</span></div></div><div class="avcard"><div class="av-head"><span class="av-k">Avatar 02</span><span class="ghost">02</span></div><h3>Women who want fuller hair</h3><p class="av-k">Core desire</p><p class="av-desire">look vibrant from the inside out</p><p class="av-k av-doorlab">Enters through</p><div class="avchips"><span class="chip">hope</span><span class="chip">aspiration</span><span class="chip">authority</span></div><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="proven" title="Problem-Aware: 4 creatives, proven"></i><i class="proven" title="Solution-Aware: 6 creatives, proven"></i><i class="empty" title="Product-Aware: nothing running"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 2 of 5 awareness levels</span><span>10 live ads &middot; 10 distinct creatives</span></div></div><div class="avcard"><div class="av-head"><span class="av-k">Avatar 03</span><span class="ghost">03</span></div><h3>People with bloating</h3><p class="av-k">Core desire</p><p class="av-desire">a gut that just works</p><p class="av-k av-doorlab">Enters through</p><div class="avchips"><span class="chip">relief</span><span class="chip">humour</span><span class="chip">aspiration</span><span class="chip">authority</span></div><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="testing" title="Problem-Aware: 3 creatives"></i><i class="empty" title="Solution-Aware: nothing running"></i><i class="proven" title="Product-Aware: 4 creatives, proven"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 2 of 5 awareness levels</span><span>8 live ads &middot; 7 distinct creatives</span></div></div></div><div class="avrow" style="--c:2"><div class="avcard"><div class="av-head"><span class="av-k">Avatar 04</span><span class="ghost">04</span></div><h3>People who want everyday health</h3><p class="av-k">Core desire</p><p class="av-desire">everyday vitality and all-round health</p><p class="av-k av-doorlab">Enters through</p><div class="avchips"><span class="chip">aspiration</span><span class="chip">authority</span><span class="chip">offer</span><span class="chip">reframe</span></div><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="testing" title="Problem-Aware: 4 creatives"></i><i class="proven" title="Solution-Aware: 11 creatives, proven"></i><i class="proven" title="Product-Aware: 2 creatives, proven"></i><i class="testing" title="Most-Aware: 4 creatives"></i></div><div class="av-foot"><span>Reached at 4 of 5 awareness levels</span><span>29 live ads &middot; 21 distinct creatives</span></div></div><div class="avcard"><div class="av-head"><span class="av-k">Avatar 05</span><span class="ghost">05</span></div><h3>People who want to stay strong</h3><p class="av-k">Core desire</p><p class="av-desire">physical strength and structural resilience</p><p class="av-k av-doorlab">Enters through</p><div class="avchips"><span class="chip">aspiration</span><span class="chip">authority</span></div><div class="avstrip"><i class="empty" title="Unaware: nothing running"></i><i class="testing" title="Problem-Aware: 3 creatives"></i><i class="empty" title="Solution-Aware: nothing running"></i><i class="testing" title="Product-Aware: 1 creative"></i><i class="empty" title="Most-Aware: nothing running"></i></div><div class="av-foot"><span>Reached at 2 of 5 awareness levels</span><span>4 live ads &middot; 4 distinct creatives</span></div></div></div></div></div>
+</section>
+
+<div class="rule"></div>
+<section>
+  <p class="kicker">What is already working</p>
+  <h2>Every distinct creative you run</h2>
+  <p class="mut">Each row is one distinct creative, with all its variations rolled into it (the count sits next to
+  the run-time). I can&rsquo;t see inside your account, so the only honest read from outside is how long it has
+  stayed live: the longer it runs, the more likely it is paying.</p>
+  <div class="bleed">
+  <div class="toolbar">
+    <label>Avatar <select id="fAvatar"><option value="">All avatars</option></select></label>
+    <label>Awareness <select id="fStage"><option value="">All levels</option></select></label>
+    <label>Show <select id="fShow"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="9999">All</option></select></label>
+    <span class="rr-key"><i class="rr proven"></i>Proven 30d+<i class="rr testing"></i>Testing &lt;30d</span>
+  </div>
+  <div class="adt-scroll"><table class="adt"><thead><tr>
+    <th></th><th>Concept</th><th>Angle</th><th>Style</th><th>Hook</th><th class="col-av">Avatar</th><th class="col-st">Awareness</th>
+    <th class="sortable" id="sortRun">Run <span id="sortArrow">&#8595;</span></th><th></th>
+  </tr></thead><tbody id="adBody"></tbody></table></div>
+  <p class="mut adt-count" id="adCount"></p>
+  </div>
+</section>
+
+<section>
+  <p class="kicker">What I would run next</p>
+  <h2>Your next moves, in order</h2>
+  <p class="mut">Each move fills specific boxes on the matrix and climbs your score, creating more diversity
+  in your account.</p>
+  <ol class="plays"><li class="play"><span class="pnum">01</span><div class="ptxt"><p class="pmove">Cover problem and solution aware for each avatar</p><p class="pdesc">Run solution-aware hooks for people with bloating and people who want to stay strong. Now every avatar has problem AND solution covered.</p><p class="pscore">52% &#8594; 60% &middot; foundation set at 40%+, B tier</p></div></li><li class="play"><span class="pnum">02</span><div class="ptxt"><p class="pmove">Open the Unaware level</p><p class="pdesc">Catch your avatars before they feel the problem at all: the biggest untapped audience, the swing that pays the most but is the hardest to run.</p><p class="pscore">your biggest new audience</p></div></li><li class="play"><span class="pnum">03</span><div class="ptxt"><p class="pmove">Deepen the proven avatars</p><p class="pdesc">Extend into product-aware and most-aware for the avatars already working, starting with women who want fuller hair, to climb past 60%.</p><p class="pscore">depth on your winners</p></div></li></ol>
+</section>
+
+<section class="gp-offer">
+  <p class="ck">The next steps</p>
+  <h2>The other half of the equation</h2>
+  <p class="lead">Ever since Meta&rsquo;s algorithm update, near-identical ads get grouped into one bucket.</p>
+  <p class="lead">Relaunching a winner, or running multiple versions of the same creative, does not buy you
+  more reach.</p>
+  <p class="lead">It buys you fatigue: frequency climbs, the audience tires, your CPA creeps up... until the
+  ad dies.</p>
+  <p class="lead">And you&rsquo;re back on square one, figuring out the next ad to run.</p>
+
+  <p class="lead">Ads aren&rsquo;t the problem. AI can make ads in minutes.</p>
+  <p class="lead">Creative diversity is the problem. Making ads that outplay the algorithm.</p>
+  <p class="lead">I run a 5-part creative feedback loop to find your next winner.</p>
+
+  <ol class="loop">
+    <li class="step here">
+      <span class="dot">01</span>
+      <div class="txt"><b>Brand audit page</b><span>I take apart your whole ad account: every concept, angle,
+      style, hook, the avatars you target, and the awareness levels you reach.</span></div>
+      <span class="youhere">You are here</span>
+    </li>
+    <li class="step">
+      <span class="dot">02</span>
+      <div class="txt"><b>Customer voice document</b><span>I gather the exact language your avatars use in
+      private: the core desire, the fears, the failed solutions, and the private beliefs.</span></div>
+    </li>
+    <li class="step">
+      <span class="dot">03</span>
+      <div class="txt"><b>Simulated feed document</b><span>I map the messages your avatars already see from
+      competitors, so I know the market sophistication and the mechanisms in play.</span></div>
+    </li>
+    <li class="step">
+      <span class="dot">04</span>
+      <div class="txt"><b>Angles from data</b><span>New angles built from that research, weighed against market
+      sophistication and tied back to your mechanism.</span></div>
+    </li>
+    <li class="step">
+      <span class="dot">05</span>
+      <div class="txt"><b>Creative flywheel</b><span>A flywheel built inside your ad account that gets sharper
+      every round of testing, until we find your next winner.</span></div>
+    </li>
+  </ol>
+
+  <p class="offer">Pick a time below and I&rsquo;ll do steps two through four: I&rsquo;ll build and show you
+  the ad to run, so you can fill the gap and get a gameplan on what ads to run next.</p>
+  <div class="cal-embed"><div class="calendly-inline-widget" data-url="https://calendly.com/ben-benlomon/the-gap-playbook?hide_gdpr_banner=1" style="min-width:320px;height:680px"></div></div><script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <p class="keep">Yours to keep, whether we work together or not.</p>
+</section>
+
+<div class="foot">
+  <p><b>How to read this:</b> this is built entirely from your <b>public</b> Meta Ad Library, what is running and
+  for how long, never your private cost, click or revenue numbers. "Working" means an ad is long-running or heavily
+  scaled, which is a strong free signal, not confirmed profit. Treat the plays above as where I would test, not gospel.</p>
+  <p style="margin-top:10px">Prepared by <b>Ben Lomon</b> &middot; July 2026</p>
+</div>
+
+</div>
+<div class="mxmodal" id="mxModal"><div class="mxm-card">
+  <div class="mxm-head"><span id="mxModalTitle"></span><button class="mxm-close" aria-label="Close">&times;</button></div>
+  <div class="mxm-body" id="mxModalBody"></div>
+</div></div>
+<script>window.__ADS__ = [{"img": "img/ad_1746546289812620.jpg", "concept": "Men and women need different multivitamins", "angle": "Reframe", "angletext": "Men and women have different nutrient needs, so your multivitamin should too.", "style": "Lifestyle montage", "hooktype": "Relatability", "hook": "Back to normal, then.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1746546289812620", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_1848526099438310.jpg", "concept": "One capsule replaces a shelf of daily supplements", "angle": "Story", "angletext": "Replace your whole shelf of supplements with one capsule made for women.", "style": "Creator talking to camera", "hooktype": "Relatability", "hook": "I wanted to share with you all the most important step in my morning routine that helps support my skin and hair health", "stage": "Solution-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1848526099438310", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Solution-aware"]]}, {"img": "img/ad_993225496686186.jpg", "concept": "Men and women need different multivitamins", "angle": "Reframe", "angletext": "Men and women have different nutrient needs, so your multivitamin should too.", "style": "Lifestyle montage", "hooktype": "Desire Led", "hook": "Cover the bases this Winter.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=993225496686186", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_1517361509744421.jpg", "concept": "PeriMenoFriend: award-winning perimenopause formula", "angle": "Authority", "angletext": "Support your perimenopause with the multi-nutrient formula experts voted best.", "style": "Product demo", "hooktype": "Authority Reaction", "hook": "Voted 'Best Perimenopause Supplement' by BBC Good Food.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1517361509744421", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_2385373701959911.jpg", "concept": "One capsule replaces a shelf of daily supplements", "angle": "Story", "angletext": "Replace your whole shelf of supplements with one capsule made for women.", "style": "Creator talking to camera", "hooktype": "Comment Reply", "hook": "Your skin looks so healthy, what's your secret?", "stage": "Solution-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2385373701959911", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Solution-aware"]]}, {"img": "img/ad_3195260073987704.jpg", "concept": "Gut Works packs 50 billion live cultures a day", "angle": "Discovery", "angletext": "Get your health back to basics with 50 billion live cultures a day.", "style": "Product shot", "hooktype": "Desire Led", "hook": "Back to basics. Start with your gut.", "stage": "Product-aware", "avatar": "People with bloating", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=3195260073987704", "versions": 1, "visuals": 1, "cells": [["People with bloating", "Product-aware"]]}, {"img": "img/ad_1008268388246328.jpg", "concept": "Hair regrowth shown before and after in 90 days", "angle": "Story", "angletext": "See the regrowth for yourself, before and after, in as little as 90 days.", "style": "Before / after image", "hooktype": "Before After", "hook": "2026 the year of regrowth", "stage": "Problem-aware", "avatar": "Women who want fuller hair", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1008268388246328", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Problem-aware"]]}, {"img": "img/ad_2406352789872587.jpg", "concept": "Chat: what finally helped my hair shedding", "angle": "Story", "angletext": "Here's the answer when someone asks what actually stopped their shedding.", "style": "Native UGC screenshot", "hooktype": "Comment Reply", "hook": "Did you find anything that actually helped with shedding?", "stage": "Solution-aware", "avatar": "Women who want fuller hair", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2406352789872587", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Solution-aware"]]}, {"img": "img/ad_1500070234855303.jpg", "concept": "A daily supplement for edgy, irritable perimenopause", "angle": "Story", "angletext": "Make a low-drama daily supplement your answer to feeling edgy in your 40s.", "style": "Native UGC screenshot", "hooktype": "Relatability", "hook": "Hate how edgy and irritable I'm feeling since I turned 40! Started taking these as a low-drama daily step.", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1500070234855303", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_1010862181358764.jpg", "concept": "Chat: what finally helped my hair shedding", "angle": "Story", "angletext": "Here's the answer when someone asks what actually stopped their shedding.", "style": "Native UGC screenshot", "hooktype": "Comment Reply", "hook": "What did you do about your hair thinning?", "stage": "Solution-aware", "avatar": "Women who want fuller hair", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1010862181358764", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Solution-aware"]]}, {"img": "img/ad_2204986293637338.jpg", "concept": "Best Multivitamin for Women, per Good Food Guide", "angle": "Authority", "angletext": "Take the multivitamin experts named Best for Women.", "style": "Testimonial image", "hooktype": "Authority Reaction", "hook": "goodfood Award Winner. Best Multivitamin for Women.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2204986293637338", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_4427319877540576.jpg", "concept": "One women's multi covers winter immunity and gut", "angle": "Conflict", "angletext": "One women's capsule covers immunity and gut so winter can't knock you down.", "style": "Feature callout", "hooktype": "Relatability", "hook": "Two more months of winter", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=4427319877540576", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_1777056896612066.jpg", "concept": "Award-winning support for perimenopause hormone swings", "angle": "Conflict", "angletext": "Steady your perimenopause hormone swings with award-winning support.", "style": "Feature callout", "hooktype": "Problem Led", "hook": "Hormones up and down? Try this. Award-winning perimenopause support.", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1777056896612066", "versions": 2, "visuals": 2, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_1351420110507086.jpg", "concept": "The #1 multivitamin and probiotic for women", "angle": "Authority", "angletext": "Join the women taking the #1 multivitamin and probiotic made for them.", "style": "Product shot", "hooktype": "Bold Claim", "hook": "The #1 multivitamin & probiotic for women*", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1351420110507086", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_3396908607153813.jpg", "concept": "Exhausted mum googles how others aren't tired", "angle": "Conflict", "angletext": "The daily multi for mums who wonder how everyone else isn't this exhausted.", "style": "Native UGC screenshot", "hooktype": "Relatability", "hook": "how are other mums not exhausted?", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=3396908607153813", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_27618719081059006.jpg", "concept": "Men and women need different multivitamins", "angle": "Discovery", "angletext": "Men and women have different nutrient needs, so your multivitamin should too.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "Take two with breakfast. Take the bottle everywhere. Free shaker bottle.", "stage": "Product-aware", "avatar": "People who want everyday health", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=27618719081059006", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Product-aware"]]}, {"img": "img/ad_1448944203938292.jpg", "concept": "Women's multi comes with free electrolytes gift", "angle": "Discovery", "angletext": "Get your daily women's multi plus free electrolytes for energy and hydration.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "Energy + hydration, sorted. Your daily multi, plus free electrolytes.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 32, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=1448944203938292", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_2639919119760627.jpg", "concept": "Sara Cox: shampoos failed, a supplement fixed my hair", "angle": "Authority", "angletext": "Shampoos never fixed Sara Cox's hair loss, but the right supplement did.", "style": "Testimonial image", "hooktype": "Tried Everything", "hook": "Kept switching shampoos to try to stop my hair loss. Nothing helped.", "stage": "Solution-aware", "avatar": "Women who want fuller hair", "days": 31, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2639919119760627", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Solution-aware"]]}, {"img": "img/ad_2069030977013466.jpg", "concept": "Exhausted mum googles how others aren't tired", "angle": "Conflict", "angletext": "The daily multi for mums who wonder how everyone else isn't this exhausted.", "style": "Native UGC screenshot", "hooktype": "Relatability", "hook": "how are other mums not exhausted?", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 31, "state": "proven", "link": "https://www.facebook.com/ads/library/?id=2069030977013466", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_2222496348490121.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Reframe", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Product shot", "hooktype": "Contrast", "hook": "Not all Omega 3s are the same. Ours is 100% algae. No fishy smell.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 27, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2222496348490121", "versions": 2, "visuals": 2, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_3332855340213109.jpg", "concept": "Best Multivitamin for Women, per Good Food Guide", "angle": "Authority", "angletext": "Take the multivitamin experts named Best for Women.", "style": "Testimonial image", "hooktype": "Authority Reaction", "hook": "29 active ingredients, 5 billion live cultures, zero additives. Awarded 'Best multivitamin for women'.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 27, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=3332855340213109", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_1015512964749907.jpg", "concept": "Best Multivitamin for Women, per Good Food Guide", "angle": "Authority", "angletext": "Take the multivitamin experts named Best for Women.", "style": "Testimonial image", "hooktype": "Authority Reaction", "hook": "Try the award-winning women's multivitamin with 29 active ingredients.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 27, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1015512964749907", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_1437408728141979.jpg", "concept": "Sara Cox: more energy than ever on DR.VEGAN", "angle": "Authority", "angletext": "Feel stronger with more energy than ever, like Sara Cox does on DR.VEGAN.", "style": "Testimonial image", "hooktype": "Authority Reaction", "hook": "I feel better, I feel stronger, I've got more energy than ever. That's why I take DR.VEGAN.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 21, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1437408728141979", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_1253794526664953.jpg", "concept": "A probiotic for people who feel bloated and can't go", "angle": "Conflict", "angletext": "If you're bloated and can't go, one daily capsule with 50 billion cultures gets you moving.", "style": "Creator talking to camera", "hooktype": "If You Are X", "hook": "If you're struggling to go and you feel bloated", "stage": "Problem-aware", "avatar": "People with bloating", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1253794526664953", "versions": 1, "visuals": 1, "cells": [["People with bloating", "Problem-aware"]]}, {"img": "img/ad_987114694186737.jpg", "concept": "50bn live cultures gives gold-medal digestion", "angle": "Story", "angletext": "A daily probiotic so effective your digestion deserves a gold medal.", "style": "Creator talking to camera", "hooktype": "Bold Claim", "hook": "I don't want to show off, but if there was a poo Olympics, I'd get gold.", "stage": "Product-aware", "avatar": "People with bloating", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=987114694186737", "versions": 2, "visuals": 2, "cells": [["People with bloating", "Product-aware"]]}, {"img": "img/ad_1729630401567283.jpg", "concept": "Hair Saviour uses clinically proven AnaGain for hair", "angle": "Conflict", "angletext": "Say goodbye to thinning hair with clinically proven AnaGain and 13 nutrients.", "style": "Problem to solution video", "hooktype": "Problem Led", "hook": "Say goodbye to dull, thinning hair.", "stage": "Problem-aware", "avatar": "Women who want fuller hair", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1729630401567283", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Problem-aware"]]}, {"img": "img/ad_954854374175482.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Reframe", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Lifestyle montage", "hooktype": "Myth Bust", "hook": "Fish oil? No thanks! Choose pure algae oil Omega 3.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=954854374175482", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_1561162102385916.jpg", "concept": "Best Multivitamin for Women, per Good Food Guide", "angle": "Authority", "angletext": "Take the multivitamin experts named Best for Women.", "style": "Creator talking to camera", "hooktype": "Authority Reaction", "hook": "BBC Good Food awarded DR.VEGAN's Women's ProMulti as best multivitamin for women last year.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1561162102385916", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_1738784483815739.jpg", "concept": "Protein, creatine and mushrooms in one clean scoop", "angle": "Conflict", "angletext": "Not feeling strong? Upgrade your fuel with protein, creatine and mushrooms in one.", "style": "Problem to solution video", "hooktype": "Problem Led", "hook": "Not feeling strong? Time to upgrade your fuel.", "stage": "Problem-aware", "avatar": "People who want to stay strong", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1738784483815739", "versions": 1, "visuals": 1, "cells": [["People who want to stay strong", "Problem-aware"]]}, {"img": "img/ad_907469112377616.jpg", "concept": "A supplement that clears an acne-tracked camera roll", "angle": "Story", "angletext": "If your camera roll is full of skin-tracking photos, clear it from within.", "style": "Before / after video", "hooktype": "Relatability", "hook": "If your camera roll looks like this...", "stage": "Problem-aware", "avatar": "Women who want fuller hair", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=907469112377616", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Problem-aware"]]}, {"img": "img/ad_2617706711964679.jpg", "concept": "Adults need more protein for muscle and bone with age", "angle": "Discovery", "angletext": "You need more protein for muscle and bone as you age, so stop guessing how much.", "style": "Creator talking to camera", "hooktype": "Problem Led", "hook": "Many adults are confused about how much protein they need in their diet.", "stage": "Problem-aware", "avatar": "People who want to stay strong", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2617706711964679", "versions": 1, "visuals": 1, "cells": [["People who want to stay strong", "Problem-aware"]]}, {"img": "img/ad_1322712792656678.jpg", "concept": "OsteoFriend: 19 nutrients in one powder for bones", "angle": "Conflict", "angletext": "Protect your future bone health with 19 nutrients in one clean daily powder.", "style": "Problem to solution video", "hooktype": "Problem Led", "hook": "Worried about future bone health?", "stage": "Problem-aware", "avatar": "People who want to stay strong", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1322712792656678", "versions": 1, "visuals": 1, "cells": [["People who want to stay strong", "Problem-aware"]]}, {"img": "img/ad_989456997196551.jpg", "concept": "Sara Cox: shampoos failed, a supplement fixed my hair", "angle": "Authority", "angletext": "Shampoos never fixed Sara Cox's hair loss, but the right supplement did.", "style": "Testimonial image", "hooktype": "Tried Everything", "hook": "Kept switching shampoos to try to stop my hair loss. Nothing helped.", "stage": "Solution-aware", "avatar": "Women who want fuller hair", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=989456997196551", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Solution-aware"]]}, {"img": "img/ad_1844142273211127.jpg", "concept": "Sara Cox: what our bodies need changes over time", "angle": "Authority", "angletext": "What your body needs changes over time; DR.VEGAN makes keeping up simple.", "style": "Testimonial image", "hooktype": "Authority Reaction", "hook": "What our bodies need changes over time. DR.VEGAN makes it pretty simple.", "stage": "Product-aware", "avatar": "People who want everyday health", "days": 20, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1844142273211127", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Product-aware"]]}, {"img": "img/ad_1814148622894186.jpg", "concept": "PMS Hero uses magnesium and agnus castus for PMS", "angle": "Story", "angletext": "Ease your PMS in the days before your period with magnesium and agnus castus.", "style": "Lifestyle montage", "hooktype": "Relatability", "hook": "Here's what I ate when I was severely PMSing.", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 15, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1814148622894186", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_1557106932702324.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Reframe", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Product shot", "hooktype": "Contrast", "hook": "Not all Omega 3s are the same. Ours is 100% algae. No fishy smell.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 15, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1557106932702324", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_4593022220921653.jpg", "concept": "Free 15-minute consult with a qualified nutritionist", "angle": "Discovery", "angletext": "Book a free 15-minute call with a qualified nutritionist for a plan made for you.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "Want to improve your energy, immunity, gut health or overall wellbeing?", "stage": "Problem-aware", "avatar": "People who want everyday health", "days": 14, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=4593022220921653", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Problem-aware"]]}, {"img": "img/ad_852452181271723.jpg", "concept": "Hair Saviour uses clinically proven AnaGain for hair", "angle": "Conflict", "angletext": "Say goodbye to thinning hair with clinically proven AnaGain and 13 nutrients.", "style": "Problem to solution video", "hooktype": "Problem Led", "hook": "Say goodbye to dull, thinning hair.", "stage": "Problem-aware", "avatar": "Women who want fuller hair", "days": 12, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=852452181271723", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Problem-aware"]]}, {"img": "img/ad_1788932535412195.jpg", "concept": "One women's multi covers winter immunity and gut", "angle": "Conflict", "angletext": "One women's capsule covers immunity and gut so winter can't knock you down.", "style": "Problem to solution video", "hooktype": "Relatability", "hook": "I keep asking other parents... how do you get through winter?", "stage": "Problem-aware", "avatar": "Women who want a daily multivitamin", "days": 8, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1788932535412195", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Problem-aware"]]}, {"img": "img/ad_2606063089812050.jpg", "concept": "10 years of feeling heavy and sluggish, gone", "angle": "Story", "angletext": "A decade of feeling heavy and sluggish, gone once your gut finally works.", "style": "Testimonial image", "hooktype": "Confession", "hook": "10 years of feeling heavy and sluggish. GONE.", "stage": "Problem-aware", "avatar": "People with bloating", "days": 7, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2606063089812050", "versions": 1, "visuals": 1, "cells": [["People with bloating", "Problem-aware"]]}, {"img": "img/ad_780306331838186.jpg", "concept": "Shampoo works outside, Hair Saviour works from within", "angle": "Reframe", "angletext": "Shampoo only works on the surface; grow stronger hair from within instead.", "style": "Native UGC screenshot", "hooktype": "Tried Everything", "hook": "I've tried every shampoo going. Nothing has helped my thinning. Is Hair Saviour actually different?", "stage": "Solution-aware", "avatar": "Women who want fuller hair", "days": 7, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=780306331838186", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Solution-aware"]]}, {"img": "img/ad_27749240804670058.jpg", "concept": "Not all supplements are equal; know what's in yours", "angle": "Reframe", "angletext": "Not all supplements are equal, so choose one with pure ingredients you can trust.", "style": "Native UGC screenshot", "hooktype": "Confession", "hook": "I thought supplements were exactly the same. Turns out there's a lot of difference.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 7, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=27749240804670058", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_2211486659688461.jpg", "concept": "Not all supplements are equal; know what's in yours", "angle": "Reframe", "angletext": "Not all supplements are equal, so choose one with pure ingredients you can trust.", "style": "Native UGC screenshot", "hooktype": "Confession", "hook": "When I started looking into supplements, I was shocked at how many have loads of rubbish in them.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 7, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2211486659688461", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_826793807032466.jpg", "concept": "Sara Cox: more energy than ever on DR.VEGAN", "angle": "Authority", "angletext": "Feel stronger with more energy than ever, like Sara Cox does on DR.VEGAN.", "style": "Testimonial image", "hooktype": "Authority Reaction", "hook": "I feel better, I feel stronger, I've got more energy than ever.", "stage": "Product-aware", "avatar": "Women who want a daily multivitamin", "days": 7, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=826793807032466", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Product-aware"]]}, {"img": "img/ad_864139539682509.jpg", "concept": "50bn live cultures gives gold-medal digestion", "angle": "Story", "angletext": "A daily probiotic so effective your digestion deserves a gold medal.", "style": "Creator talking to camera", "hooktype": "Bold Claim", "hook": "I don't want to show off. But if there was a poo Olympics, I'd get gold.", "stage": "Product-aware", "avatar": "People with bloating", "days": 6, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=864139539682509", "versions": 1, "visuals": 1, "cells": [["People with bloating", "Product-aware"]]}, {"img": "img/ad_4353981444816849.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Reframe", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Lifestyle montage", "hooktype": "Myth Bust", "hook": "Fish oil? No thanks! Choose pure algae oil Omega 3.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 6, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=4353981444816849", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_884152120832034.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Story", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Lifestyle montage", "hooktype": "Relatability", "hook": "Happy to have found a vegan omega 3 option that is at a reasonable price.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 6, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=884152120832034", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_1715794049844384.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Reframe", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Lifestyle montage", "hooktype": "Myth Bust", "hook": "Fish oil? No thanks! Choose pure algae oil Omega 3.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 6, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1715794049844384", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_1998946874067312.jpg", "concept": "DR.VEGAN 6th birthday: up to 30% off sitewide", "angle": "Urgency", "angletext": "Celebrate our 6th birthday with up to 30% off everything you already wanted.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "DR.VEGAN BIRTHDAY SALE. Up to 30% off* EVERYTHING when you spend \u00a330+", "stage": "Most-aware", "avatar": "People who want everyday health", "days": 6, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1998946874067312", "versions": 3, "visuals": 2, "cells": [["People who want everyday health", "Most-aware"]]}, {"img": "img/ad_3105940752949864.jpg", "concept": "Algae omega-3 gives DHA and EPA without the fish oil", "angle": "Reframe", "angletext": "Get your omega-3 DHA and EPA from clean algae, with none of the fishy fish oil.", "style": "Product shot", "hooktype": "Contrast", "hook": "550mg Omega 3. 300mg DHA. From algae, not fish.", "stage": "Solution-aware", "avatar": "People who want everyday health", "days": 6, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=3105940752949864", "versions": 2, "visuals": 2, "cells": [["People who want everyday health", "Solution-aware"]]}, {"img": "img/ad_1060193546681238.jpg", "concept": "DR.VEGAN 6th birthday: up to 30% off sitewide", "angle": "Urgency", "angletext": "Celebrate our 6th birthday with up to 30% off everything you already wanted.", "style": "Animated", "hooktype": "Desire Led", "hook": "DR.VEGAN BIRTHDAY SALE Up to 30% off* EVERYTHING when you spend \u00a330+", "stage": "Most-aware", "avatar": "People who want everyday health", "days": 5, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1060193546681238", "versions": 3, "visuals": 2, "cells": [["People who want everyday health", "Most-aware"]]}, {"img": "img/ad_1013112781499282.jpg", "concept": "DR.VEGAN 6th birthday: up to 30% off sitewide", "angle": "Urgency", "angletext": "Celebrate our 6th birthday with up to 30% off everything you already wanted.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "DR.VEGAN BIRTHDAY SALE. Up to 30% off* EVERYTHING", "stage": "Most-aware", "avatar": "People who want everyday health", "days": 5, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1013112781499282", "versions": 3, "visuals": 3, "cells": [["People who want everyday health", "Most-aware"]]}, {"img": "img/ad_1562776088786345.jpg", "concept": "One capsule replaces a shelf of daily supplements", "angle": "Story", "angletext": "Replace your whole shelf of supplements with one capsule made for women.", "style": "Creator talking to camera", "hooktype": "Relatability", "hook": "I wanted to share with you all the most important step in my morning routine", "stage": "Solution-aware", "avatar": "Women who want a daily multivitamin", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1562776088786345", "versions": 1, "visuals": 1, "cells": [["Women who want a daily multivitamin", "Solution-aware"]]}, {"img": "img/ad_850643064539553.jpg", "concept": "DR.VEGAN 6th birthday: up to 30% off sitewide", "angle": "Urgency", "angletext": "Celebrate our 6th birthday with up to 30% off everything you already wanted.", "style": "Animated", "hooktype": "Desire Led", "hook": "We're Celebrating 6 Years! Use code BIRTHDAY to enjoy sitewide savings. Save up to 30%", "stage": "Most-aware", "avatar": "People who want everyday health", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=850643064539553", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Most-aware"]]}, {"img": "img/ad_4197414230548748.jpg", "concept": "Gut Works packs 50 billion live cultures a day", "angle": "Discovery", "angletext": "Get your health back to basics with 50 billion live cultures a day.", "style": "Product shot", "hooktype": "Desire Led", "hook": "Back to basics. Start with your gut.", "stage": "Product-aware", "avatar": "People with bloating", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=4197414230548748", "versions": 1, "visuals": 1, "cells": [["People with bloating", "Product-aware"]]}, {"img": "img/ad_914060121709505.jpg", "concept": "10 years of feeling heavy and sluggish, gone", "angle": "Story", "angletext": "A decade of feeling heavy and sluggish, gone once your gut finally works.", "style": "Testimonial image", "hooktype": "Confession", "hook": "10 years of feeling heavy and sluggish. GONE.", "stage": "Problem-aware", "avatar": "People with bloating", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=914060121709505", "versions": 1, "visuals": 1, "cells": [["People with bloating", "Problem-aware"]]}, {"img": "img/ad_993108730197078.jpg", "concept": "Free 15-minute consult with a qualified nutritionist", "angle": "Discovery", "angletext": "Book a free 15-minute call with a qualified nutritionist for a plan made for you.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "For the first time I felt that someone understood my symptoms.", "stage": "Problem-aware", "avatar": "People who want everyday health", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=993108730197078", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Problem-aware"]]}, {"img": "img/ad_800471266389092.jpg", "concept": "Free 15-minute consult with a qualified nutritionist", "angle": "Discovery", "angletext": "Book a free 15-minute call with a qualified nutritionist for a plan made for you.", "style": "Offer / discount", "hooktype": "Desire Led", "hook": "Wonderful, specific advice. A great listener and not pushy.", "stage": "Problem-aware", "avatar": "People who want everyday health", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=800471266389092", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Problem-aware"]]}, {"img": "img/ad_2464620604019957.jpg", "concept": "Free nutritionist consult to start losing weight", "angle": "Conflict", "angletext": "Get free expert weight-loss advice from a qualified nutritionist.", "style": "Offer / discount", "hooktype": "Problem Led", "hook": "Struggling to lose weight and not sure where to start?", "stage": "Problem-aware", "avatar": "People who want everyday health", "days": 4, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=2464620604019957", "versions": 1, "visuals": 1, "cells": [["People who want everyday health", "Problem-aware"]]}, {"img": "img/ad_1352513896842204.jpg", "concept": "Sara Cox: shampoos failed, a supplement fixed my hair", "angle": "Authority", "angletext": "Shampoos never fixed Sara Cox's hair loss, but the right supplement did.", "style": "Testimonial image", "hooktype": "Tried Everything", "hook": "Kept switching shampoos to try to stop my hair loss. Nothing helped.", "stage": "Solution-aware", "avatar": "Women who want fuller hair", "days": 3, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1352513896842204", "versions": 1, "visuals": 1, "cells": [["Women who want fuller hair", "Solution-aware"]]}, {"img": "img/ad_1551304349699854.jpg", "concept": "Only blend of 3 plant proteins, creatine and mushrooms", "angle": "Reframe", "angletext": "Fuel muscle with the only blend of three plant proteins, creatine and mushrooms.", "style": "Animated", "hooktype": "Desire Led", "hook": "Protein & Creatine Superblend", "stage": "Product-aware", "avatar": "People who want to stay strong", "days": 0, "state": "testing", "link": "https://www.facebook.com/ads/library/?id=1551304349699854", "versions": 1, "visuals": 1, "cells": [["People who want to stay strong", "Product-aware"]]}];</script>
+<script>
+(function(){
+  document.querySelectorAll(".hwrap").forEach(function(w){
+    var sc=w.querySelector(".mx-wrap"); if(!sc) return;
+    function upd(){
+      w.classList.toggle("can-scroll", sc.scrollWidth > sc.clientWidth + 4);
+      w.classList.toggle("at-end", sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4);
+    }
+    sc.addEventListener("scroll", upd, {passive:true});
+    window.addEventListener("resize", upd); upd();
+  });
+  var ADS=window.__ADS__||[], body=document.getElementById("adBody"),
+      fAv=document.getElementById("fAvatar"), fSh=document.getElementById("fShow"),
+      fSt=document.getElementById("fStage"),
+      cnt=document.getElementById("adCount"), tbl=document.querySelector("table.adt");
+  if(body){
+    function cellsOf(a){ return a.cells||[[a.avatar,a.stage]]; }
+    var avs=[]; ADS.forEach(function(a){ cellsOf(a).forEach(function(c){ if(c[0]&&avs.indexOf(c[0])<0) avs.push(c[0]); }); });
+    avs.sort().forEach(function(v){ var o=document.createElement("option"); o.value=v; o.textContent=v; fAv.appendChild(o); });
+    ["Unaware","Problem-aware","Solution-aware","Product-aware","Most-aware"].forEach(function(s){
+      if(ADS.some(function(a){ return cellsOf(a).some(function(c){ return c[1]===s; }); })){ var o=document.createElement("option"); o.value=s; o.textContent=s; fSt.appendChild(o); }
+    });
+    function cell(t,cls){ var d=document.createElement("td"); if(cls)d.className=cls; d.textContent=t||""; return d; }
+    var sortDir=-1;
+    function render(){
+      var av=fAv.value, st=fSt.value, lim=parseInt(fSh.value,10);
+      if(tbl){ tbl.classList.toggle("no-av", !!av); tbl.classList.toggle("no-st", !!st); }
+      var rows=ADS.filter(function(a){ if(!av&&!st) return true; return cellsOf(a).some(function(c){ return (!av||c[0]===av) && (!st||c[1]===st); }); });
+      rows.sort(function(x,y){ return sortDir*(x.days-y.days); });
+      var total=rows.length; rows=rows.slice(0,lim);
+      body.innerHTML="";
+      rows.forEach(function(a){
+        var tr=document.createElement("tr");
+        var timg=document.createElement("td"); timg.className="c-thumb";
+        if(a.img){ var im=document.createElement("img"); im.src=a.img; im.loading="lazy"; im.alt=""; timg.appendChild(im); }
+        tr.appendChild(timg);
+        tr.appendChild(cell(a.concept,"c-concept"));
+        var an=document.createElement("td"); an.className="c-angle";
+        var ab=document.createElement("b"); ab.textContent=a.angle; an.appendChild(ab);
+        if(a.angletext){ var asp=document.createElement("span"); asp.textContent=a.angletext; an.appendChild(asp); }
+        tr.appendChild(an);
+        tr.appendChild(cell(a.style));
+        var hk=document.createElement("td"); hk.className="c-hook";
+        var b=document.createElement("b"); b.textContent=a.hooktype; hk.appendChild(b);
+        if(a.hook){ var sp=document.createElement("span"); sp.textContent="“"+a.hook+"”"; hk.appendChild(sp); }
+        tr.appendChild(hk);
+        tr.appendChild(cell(a.avatar,"col-av"));
+        tr.appendChild(cell(a.stage,"col-st"));
+        var dy=document.createElement("td"); var pill=document.createElement("span");
+        pill.className="days "+a.state; pill.textContent=a.days+"d"; dy.appendChild(pill);
+        if(a.versions>1){
+          var vb=document.createElement("span"); vb.className="vcount";
+          var vis=a.visuals||1;
+          if(vis<=1){ vb.textContent="↻"+a.versions; vb.title="same visual re-run as "+a.versions+" ad slots (near-duplicate, the kind Meta buckets and fatigues)"; }
+          else{ vb.textContent="×"+vis; vb.title=vis+" distinct visuals"+(a.versions>vis?(", run as "+a.versions+" ad slots"):"")+" under one message"; }
+          dy.appendChild(vb);
+        }
+        tr.appendChild(dy);
+        var ln=document.createElement("td");
+        if(a.link){ var x=document.createElement("a"); x.className="go"; x.href=a.link; x.target="_blank"; x.rel="noopener"; x.textContent="Ad ↗"; ln.appendChild(x); }
+        tr.appendChild(ln); body.appendChild(tr);
+      });
+      var suffix=" creatives"; if(av&&st) suffix+=" for "+av+" · "+st; else if(av) suffix+=" for "+av; else if(st) suffix+=" in "+st;
+      cnt.textContent="Showing "+rows.length+" of "+total+suffix+(sortDir<0?", longest-running first.":", newest first.");
+    }
+    var sortRun=document.getElementById("sortRun"), sortArrow=document.getElementById("sortArrow");
+    if(sortRun){ sortRun.addEventListener("click",function(){ sortDir=-sortDir; if(sortArrow)sortArrow.innerHTML=(sortDir<0?"↓":"↑"); render(); }); }
+    fAv.addEventListener("change",render); fSt.addEventListener("change",render); fSh.addEventListener("change",render); render();
+  }
+  // Matrix cell -> inline modal listing the creatives in that exact (avatar x level) box.
+  var _mc=function(a){ return a.cells||[[a.avatar,a.stage]]; };
+  var mM=document.getElementById("mxModal"), mT=document.getElementById("mxModalTitle"), mB=document.getElementById("mxModalBody");
+  if(mM){
+    document.querySelectorAll("td.mxcell").forEach(function(td){
+      td.addEventListener("click",function(){
+        var av=td.getAttribute("data-av"), aw=td.getAttribute("data-aw");
+        var hits=ADS.filter(function(a){ return _mc(a).some(function(c){ return c[0]===av && c[1]===aw; }); });
+        mT.textContent=av+"  ·  "+aw;
+        mB.innerHTML="";
+        if(!hits.length){ var e=document.createElement("p"); e.className="mxm-empty"; e.textContent="Nothing running here. This box is an open gap, an audience you are not reaching at this level."; mB.appendChild(e); }
+        else{
+          hits.sort(function(x,y){ return (y.days||0)-(x.days||0); });
+          hits.forEach(function(a){
+            var row=document.createElement("div"); row.className="mxm-row";
+            if(a.img){ var im=document.createElement("img"); im.src=a.img; im.loading="lazy"; im.alt=""; row.appendChild(im); }
+            var tx=document.createElement("div"); tx.className="mxm-tx";
+            var cc=document.createElement("p"); cc.className="mxm-c"; cc.textContent=a.concept||"(creative)"; tx.appendChild(cc);
+            if(a.hook){ var hh=document.createElement("p"); hh.className="mxm-h"; hh.textContent="“"+a.hook+"”"; tx.appendChild(hh); }
+            var mm=document.createElement("p"); mm.className="mxm-m";
+            var dp=document.createElement("span"); dp.className="mxm-day "+(a.state||"testing"); dp.textContent=(a.days||0)+"d live"; mm.appendChild(dp);
+            if(a.versions>1){ mm.appendChild(document.createTextNode(" · "+(a.visuals||a.versions)+" variations")); }
+            tx.appendChild(mm);
+            row.appendChild(tx);
+            if(a.link){ var go=document.createElement("a"); go.className="mxm-go"; go.href=a.link; go.target="_blank"; go.rel="noopener"; go.textContent="Ad ↗"; row.appendChild(go); }
+            mB.appendChild(row);
+          });
+        }
+        mM.classList.add("on"); document.body.classList.add("mx-lock"); mB.scrollTop=0;
+      });
+    });
+    function _closeMx(){ mM.classList.remove("on"); document.body.classList.remove("mx-lock"); }
+    mM.addEventListener("click",function(e){ if(e.target===mM||e.target.classList.contains("mxm-close")) _closeMx(); });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape") _closeMx(); });
+  }
+})();
+</script>
+</body></html>
